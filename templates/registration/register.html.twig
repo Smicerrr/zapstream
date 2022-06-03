@@ -55,7 +55,7 @@
 
 
 
-{# <section id="register">
+<section id="register">
     <div class="big_box_form">
         <div class="box_button_connect">
             <div class="msg_title_connect">
@@ -66,8 +66,8 @@
                 <li><a href="{{ path('app_login') }}">Connexion</a></li>
             </div>
         </div>
-            <div class="box_regist_form"> #}
-                {# <h1 class="msg_title_regist"> INSCRIS-TOI !</h1>
+            <div class="box_regist_form">
+                <h1 class="msg_title_regist"> INSCRIS-TOI !</h1>
                     {{ form_start(registrationForm) }}
                     <div class="regist_form_pseudo">
                         {{ form_row(registrationForm.pseudo) }}
@@ -84,8 +84,8 @@
                     {{ form_row(registrationForm.agreeTerms) }}
 
                     <button type="submit" class="btn">Valider</button>
-                {{ form_end(registrationForm) }} #}
-            {# </div>
+                {{ form_end(registrationForm) }}
+            </div>
     </div>
-</section> #}
+</section>
 {% endblock %}
