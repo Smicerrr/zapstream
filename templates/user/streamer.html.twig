@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} ZapStream - Streamers {% endblock %}
+
+{% block body %}
+
+    <div class="wrap">
+        <section id="streamer">
+            <div id="heading-streamer">
+                <h1>STREAMERS</h1>
+                <p><span>recent<i class="fa-solid fa-caret-down"></i></span><span>followers<i class="fa-solid fa-caret-down"></i></span></p>
+            </div>
+
+            <div id="infos-streamers">
+
+                <div class="one-streamer">
+                    <img src="{{ asset('img/spoit.jpg') }}">
+                    <p>Spoit - 123,1k followers</p>
+                </div>
+
+                <div class="one-streamer">
+                    <img src="{{ asset('img/sharingan.png') }}">
+                    <p>ooziie - 39,6 followers</p>
+                </div>
+
+                <div class="one-streamer">
+                    <img src="{{ asset('img/sharingan.png') }}">
+                    <p>Godly - 20k followers</p>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+
+
+
+
+{% endblock %}

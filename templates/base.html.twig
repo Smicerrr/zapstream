@@ -44,7 +44,7 @@
            <ul>
                <li><a href="">Actus</a></li>
                <li><a href="">Jeux</a></li>
-               <li><a href="">Streamers</a></li>
+               <li><a href="{{ path('app_streamer') }}">Streamers</a></li>
            </ul>
         </div>
     </header>
@@ -53,9 +53,8 @@
                     
         {% block body %}{% endblock %}
 
-
-
     </body>
+
     <footer>Footer</footer>
     {{ encore_entry_script_tags('app') }}
 </html>
