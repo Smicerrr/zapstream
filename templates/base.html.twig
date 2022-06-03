@@ -2,16 +2,49 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        {{ encore_entry_link_tags('app') }}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <title>{% block title %}Welcome!{% endblock %}</title>
     </head>
+    <header>
+        <div class="top-header">
+            <div class="reseaux">
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-steam-symbol"></i>
+                <i class="fa-brands fa-twitch"></i>
+                <i class="fa-brands fa-discord"></i>
+            </div>
+
+            <div class="logo">
+                <li><a href="{{ path("app_home") }}"><img src="{{ asset('img/logo.png') }}"></a></li>
+            </div>
+
+            <div class="signing">
+                <div class="login">
+                    <button><i class="fa-solid fa-right-to-bracket">Se connecter</i></button>
+                </div>
+                <div class="register">
+                    <button><i class="fa-solid fa-registered">S'inscrire</i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-header">
+           <ul>
+               <li><a href="">Actus</a></li>
+               <li><a href="">Jeux</a></li>
+               <li><a href="">Streamers</a></li>
+           </ul>
+        </div>
+    </header>
 
     <body>
-    <header>
-        <h1>Header</h1>
-    </header>
 
         {% block body %}{% endblock %}
 
-        <footer>Footer</footer>
+
+
     </body>
+    <footer>Footer</footer>
+    {{ encore_entry_script_tags('app') }}
 </html>
