@@ -21,6 +21,7 @@ class UserFixtures extends Fixture
         $admin->setPseudo('Pumix');
         $admin->setEmail('melvin.delorme12@gmail.com');
         $admin->setRoles(['ROLE_USER', 'ROLE_ADMIN','ROLE_SUPER_ADMIN']);
+        $admin->setToken('dfsfdsdf');
         $hashpassword = $this->hasher->hashPassword($admin,'121202');
         $admin->setPassword($hashpassword);
         $manager->persist($admin);
@@ -30,7 +31,7 @@ class UserFixtures extends Fixture
         $admin->setPseudo('Smicer');
         $admin->setEmail('jeffrey.geromegnace@gmail.com');
         $admin->setRoles(['ROLE_USER', 'ROLE_ADMIN','ROLE_SUPER_ADMIN']);
-
+        $admin->setToken('dfsfdsdf');
         $hashpassword = $this->hasher->hashPassword($admin,'michel');
         $admin->setPassword($hashpassword);
         $manager->persist($admin);
@@ -39,7 +40,8 @@ class UserFixtures extends Fixture
         $admin->setPseudo('zodar');
         $admin->setEmail('zodarfr@gmail.com');
         $admin->setRoles(['ROLE_USER', 'ROLE_ADMIN','ROLE_SUPER_ADMIN']);
-        $hashpassword = $this->hasher->hashPassword($admin,'briffault');
+        $admin->setToken('dfsfdsdf');
+        $hashpassword = $this->hasher->hashPassword($admin,'michel');
         $admin->setPassword($hashpassword);
         $manager->persist($admin);
 
