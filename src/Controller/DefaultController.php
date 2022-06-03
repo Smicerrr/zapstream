@@ -15,4 +15,12 @@ class DefaultController extends AbstractController
             'controller_name' => 'DefaultController',
         ]);
     }
+
+    #[Route('/infos', name: 'app_infos')]
+    public function infos(): Response
+    {
+        return $this->render('default/infos.html.twig', [
+            'controller_name' => 'DefaultController',
+        ]);
+    }
 }
