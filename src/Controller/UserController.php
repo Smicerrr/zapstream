@@ -15,4 +15,12 @@ class UserController extends AbstractController
             'controller_name' => 'UserController',
         ]);
     }
+
+    #[Route('/user', name: 'app_user')]
+    public function streamer(): Response
+    {
+        return $this->render('user/streamer.html.twig', [
+
+        ]);
+    }
 }
