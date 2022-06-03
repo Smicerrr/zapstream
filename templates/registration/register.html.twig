@@ -3,17 +3,89 @@
 {% block title %}Register{% endblock %}
 
 {% block body %}
-    <h1>Register</h1>
 
-    {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.pseudo) }}
-        {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.password, {
-            label: 'mot de passe'
-        }) }}
-        
-        {{ form_row(registrationForm.agreeTerms) }}
+<section id="body_register">
 
-        <button type="submit" class="btn">Valider</button>
-    {{ form_end(registrationForm) }}
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{# <section id="register">
+    <div class="big_box_form">
+        <div class="box_button_connect">
+            <div class="msg_title_connect">
+                <h1> CONNECTE-TOI !</h1>
+                <p> Reconnecte toi en un clic !</p>
+            </div>
+            <div class="button_form_connect">
+                <li><a href="{{ path('app_login') }}">Connexion</a></li>
+            </div>
+        </div>
+            <div class="box_regist_form"> #}
+                {# <h1 class="msg_title_regist"> INSCRIS-TOI !</h1>
+                    {{ form_start(registrationForm) }}
+                    <div class="regist_form_pseudo">
+                        {{ form_row(registrationForm.pseudo) }}
+                    </div>
+                        <div class="regist_form_email">
+                            {{ form_row(registrationForm.email) }}
+                        </div>
+                            <div class="regist_form_password">
+                                {{ form_row(registrationForm.password, {
+                                    
+                                }) }}
+                            </div>
+                    
+                    {{ form_row(registrationForm.agreeTerms) }}
+
+                    <button type="submit" class="btn">Valider</button>
+                {{ form_end(registrationForm) }} #}
+            {# </div>
+    </div>
+</section> #}
 {% endblock %}
