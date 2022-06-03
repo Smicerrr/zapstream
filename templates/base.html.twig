@@ -3,6 +3,9 @@
     <head>
         <meta charset="UTF-8">
         {{ encore_entry_link_tags('app') }}
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <title>{% block title %}Welcome!{% endblock %}</title>
     </head>
@@ -21,10 +24,18 @@
 
             <div class="signing">
                 <div class="login">
-                    <button><i class="fa-solid fa-right-to-bracket">Se connecter</i></button>
+                    {% if app.user %}
+                        <li><a href="{{ path('app_logout') }}"><i class="fa-solid fa-arrow-right-from-bracket"></i>Deconnexion</a></li>
+                    {% else %}
+                    <li><a href="{{ path('app_login') }}"><i class="fa-solid fa-right-to-bracket"></i>Se connecter</a></li>
+                    {% endif %}
                 </div>
                 <div class="register">
-                    <button><i class="fa-solid fa-registered">S'inscrire</i></button>
+                    {% if app.user %}
+                        <li><a href=""><i class="fa-solid fa-user"></i>Mon profil</a></li>
+                    {% else %}
+                        <li><a href="{{ path('app_register') }}"><i class="fa-solid fa-registered"></i>S'inscrire</a></li>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -39,15 +50,6 @@
     </header>
 
     <body>
-    <header>
-        <h1>Header</h1>
-    </header>
-<li><a href="{{ path('app_home') }}">Home</a></li>
-                    {% if app.user %}
-                        {% endif %}
-                        <li><a href="{{ path('app_logout') }}">Déconnexion</a></li>
-                        <li><a href="{{ path('app_login') }}">Connexion</a></li>
-                        <li><a href="{{ path('app_register') }}">Inscription</a></li>
                     
         {% block body %}{% endblock %}
 
