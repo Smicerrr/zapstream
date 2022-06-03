@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+header {
+    background-color: #333360;
+}
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reseaux {
+    max-width: 33.3%;
+    font-size: 30px;
+    border: solid;
+}
+
+.reseaux i {
+    padding: 1rem;
+}
+
+.logo {
+    border: solid;
+    max-width: 33.3%;
+}
+
+.logo img {
+    max-width: 100px;
+}
+
+.signing {
+    max-width: 33.3%;
+}
+
+.bottom-header {
+    background-color: #18183C;
+}
