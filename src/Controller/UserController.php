@@ -46,6 +46,7 @@ class UserController extends AbstractController
             'streamers' => $streamers
         ]);
     }
+
     #[Route('/avatar', name: 'app_avatar')]
     public function modifAvatar(): Response
     {
