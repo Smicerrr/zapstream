@@ -3,7 +3,33 @@
 {% block title %}ZAP Stream - Accueil{% endblock %}
 
 {% block body %}
+    <div class="body_accueil">
+        <div class="body_accueil_top">
+            <div class="body_accueil_top_left">
+                <div class="body_accueil_top_left_box">
+                    {% for actu in actualites %}
+                        <div class="body_accueil_top_left_box_single1">
+                            <div class="body_accueil_top_left_box_single2">
+                                <div class="body_accueil_top_left_box_img">
+                                    {% if actu.image %}
+                                        <a href="{{ path('app_one_actu', {id: actu.id }) }}"><img src="{{ asset('upload/actus/' ~ actu.image) }}""></a>
+                                    {% endif %}
+                                </div>
+                                <div class="body_accueil_top_left_box_title">
+                                    <h2><a href="{{ path('app_one_actu', {id: actu.id }) }}">{{ actu.title }}</a></h2>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="body_accueil_top_right">
+                <h1>Accueil top right</h1>
+            </div>
 
-
-
+        </div>
+        <div class="body_accueil_bottom">
+            <h1>Accueil bottom</h1>
+        </div>
+    </div>
 {% endblock %}
