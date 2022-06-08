@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ZAP Stream - Actu{% endblock %}
+
+{% block body %}
+{#    <div class="body_actualite_alone">#}
+{#        <div class="body_actualite_back">#}
+{#            <h1><li><a href="{{ path('app_actu') }}"><i class="fa-solid fa-arrow-left"></i></a></li></h1>#}
+{#        </div>#}
+{#        <div class="body_actualite_single">#}
+{#            <div class="body_actualite_img">#}
+{#                {% if actu.image %}#}
+{#                    <img src="{{ asset('upload/actus/' ~ actu.image) }}" ">#}
+{#                {% endif %}#}
+{#            </div>#}
+{#            <div class="body_actualite_right">#}
+{#                <h2>{{ actu.title }}</h2>#}
+{#                <p>{{ actu.description }}</p>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+
+    <div class="body_actualite_alone">
+        <div class="body_actualite_top">
+            <div class="body_actualite_top_right">
+                <h1>{{ actu.title }}</h1>
+            </div>
+            <div class="body_actualite_top_left">
+                <h1><li><a href="{{ path('app_actu') }}"><i class="fa-solid fa-arrow-left"></i></a></li></h1>
+            </div>
+        </div>
+        <div class="body_actualite_bottom">
+            <div class="body_actualite_bottom_left">
+                {% if actu.image %}
+                    <img src="{{ asset('upload/actus/' ~ actu.image) }}" ">
+                {% endif %}
+            </div>
+            <div class="body_actualite_bottom_right">
+                    <p>{{ actu.description }}</p>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

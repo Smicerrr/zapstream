@@ -4,6 +4,9 @@
 
 {% block body %}
 
-<h1>Bienvenue</h1>
+<section id="profil_user">
+{{ form_row(editForm.email) }}
+{{ form_row(editForm.password) }}
+</section>
 
 {% endblock %}

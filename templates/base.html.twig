@@ -34,7 +34,7 @@
                 </div>
                 <div class="register">
                     {% if app.user %}
-                        <li><a href=""><i class="fa-solid fa-user"></i>Mon profil</a></li>
+                        <li><a href="{{ path('app_user') }}"><i class="fa-solid fa-user"></i>Mon profil</a></li>
                     {% else %}
                         <li><a href="{{ path('app_register') }}"><i class="fa-solid fa-registered"></i>S'inscrire</a></li>
                     {% endif %}
@@ -44,7 +44,7 @@
 
         <div class="bottom-header">
            <ul>
-               <li><a href="">Actus</a></li>
+               <li><a href="{{ path('app_actu') }}">Actus</a></li>
                <li><a href="">Jeux</a></li>
                <li><a href="{{ path('app_streamer') }}">Streamers</a></li>
            </ul>
@@ -52,8 +52,6 @@
     </header>
 
     <body>
-
-                    
         {% block body %}{% endblock %}
 
     </body>

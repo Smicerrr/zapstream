@@ -1,0 +1,125 @@
+/* body */
+
+#body_login{
+    padding: 5rem 0rem 5rem 0rem;
+    justify-content: center;
+    display: flex;
+    background-color: #18183C;
+    
+}
+
+.big_box_login{
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #282845;
+    width: 90%;
+    
+}
+
+.box_login2{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 70%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.box_login2 h2{
+    color: white;
+    padding-bottom: 4rem;
+
+}
+
+.mini_login{
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.button_mini_login button{
+    padding-top: 2rem;
+}
+
+.msg_title_login {
+    
+}
+
+.form_login{
+    
+    width: 50%;
+}
+.box_register2{
+    padding: 2rem 0rem 4rem 0rem;
+    width: 30%;
+    background-color: #474687;
+    text-align: center;
+}
+
+.regist_form{
+    
+}
+
+.regist_img{
+    
+    padding-bottom: 1.5rem;
+}
+
+.regist_form input{
+    padding-left: 0.5rem;
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.msg_title_regist{
+    color: white;
+    padding-bottom: 5rem;
+}
+
+.msg_title_regist h2{
+    padding-bottom: 0.8rem;
+    
+}
+
+.button_form_regist li a{
+    padding:0.5rem 2rem 0.5rem 2rem;
+    background-color: #A053CF;
+    border-radius: 15px;
+}
+
+.box_register2 h1{
+    padding-top: 0.5rem;
+    color: white;
+    
+}
+.box_register2 input{
+    padding: 0.2rem;
+    margin-top: 1rem;
+    
+}
+.agree_form_register{
+    color: white;
+}
+
+.box_login2 button{
+    padding:0.5rem 2rem 0.5rem 2rem;
+    background-color: #A053CF;
+    border-radius: 15px;
+    border: none;
+}
+
+.box_login2 button:hover{
+    color: white;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.button_form_regist{
+    padding-top: 1rem;
+}
+
+.button_form_regist button:hover{
+    color: #7d5d99;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
