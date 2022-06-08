@@ -14,14 +14,15 @@
             <div id="all-streamers">
                 {% for streamer in streamers %}
                     <div class="row-streamer">
-                        <a href="{{ path('app_one_streamer', {id: streamer.id }) }}">
                             <div class="one-streamer shadow">
+                                <a href="{{ path('app_one_streamer', {id: streamer.id }) }}">
                                 {% if streamer.avatar %}
                                     <img src="{{ asset('upload/users/' ~ streamer.avatar) }}">
                                 {% endif %}
-                                <p> {{ streamer.pseudo }} - {{ streamer.followers }} followers</p>
+                                    <p> {{ streamer.pseudo }} - {{ streamer.followers }} followers</p>
+                                </a>
                             </div>
-                        </a>
+
                     </div>
                 {% endfor %}
             </div>

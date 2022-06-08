@@ -4,6 +4,9 @@
 
 {% block body %}
     <div class="body_accueil">
+        <div class="body_accueil_title">
+            <h1>Accueil</h1>
+        </div>
         <div class="body_accueil_top">
             <div class="body_accueil_top_left">
                 <div class="body_accueil_top_left_box">
@@ -24,12 +27,23 @@
                 </div>
             </div>
             <div class="body_accueil_top_right">
-                <h1>Accueil top right</h1>
+                <h1>Accueil top right (publications)</h1>
             </div>
 
         </div>
         <div class="body_accueil_bottom">
-            <h1>Accueil bottom</h1>
+            {% for streamer in streamers %}
+                <div class="body_accueil_bottom_streamer">
+                        <div class="body_accueil_bottom_streamer_single shadow">
+                            <a href="{{ path('app_one_streamer', {id: streamer.id }) }}">
+                            {% if streamer.avatar %}
+                                <img src="{{ asset('upload/users/' ~ streamer.avatar) }}">
+                            {% endif %}
+                            <p> {{ streamer.pseudo }} - {{ streamer.followers }} followers</p>
+                            </a>
+                        </div>
+                </div>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}
