@@ -1,0 +1,89 @@
+/*header*/
+
+.body_a_propos {
+    background-color: #18183C;
+    color: white;
+}
+
+.body_a_propos_img {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1.5rem;
+}
+
+.body_a_propos_img img {
+    width: 300px;
+}
+
+/*Body*/
+
+.body_a_propos_top1 {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
+
+.body_a_propos_top2 {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
+
+.body_a_propos_big_center {
+    display: flex;
+    justify-content: center;
+}
+
+.body_a_propos_center {
+    width: 80%;
+}
+
+/*Body center text*/
+
+.body_a_propos_center_text1 {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1.3rem;
+}
+
+.body_a_propos_center_text2 {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1.3rem;
+}
+
+.body_a_propos_center_text3 {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1.3rem;
+}
+
+.body_a_propos_center_text4 {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1.3rem;
+}
+
+.body_a_propos_center_text5 {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1.3rem;
+}
+
+/*bottom*/
+
+.body_a_propos_bottom_1 {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
+
+.body_a_propos_bottom_2 {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
+
+
+
+

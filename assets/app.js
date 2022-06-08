@@ -11,6 +11,7 @@ import './styles/streamer.css';
 import './styles/formRegister.css';
 import './styles/actus.css';
 import './styles/formLogin.css';
+import './styles/infos.css';
 
 
 // start the Stimulus application

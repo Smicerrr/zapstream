@@ -204,3 +204,96 @@ footer {
 .footer-right li {
     padding-bottom: 0.6rem;
 }
+
+/*Responsive*/
+
+@media (max-width: 56rem) {
+    /*footer-left*/
+
+    .footer-left {
+        width:50%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-left img {
+        width: 0px;
+        margin-left: 0rem;
+        padding-top: 0rem;
+    }
+
+    .footer-left h2 {
+        display: flex;
+        justify-content: center;
+        padding-top: 5.5rem;
+        margin-left: 0rem;
+    }
+
+    /*footer-center*/
+
+    .footer-center {
+        position: absolute;
+        width: 50%;
+    }
+
+    .liens-footer ul {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 0rem 0rem 0rem 0rem;
+    }
+
+    .reseaux-footer {
+        display: flex;
+        justify-content: center;
+        padding-top: 1rem;
+        margin-right: 0rem;
+    }
+
+    .reseaux-footer ul {
+        display: flex;
+        justify-content: space-evenly;
+        gap:3rem;
+    }
+
+    .reseaux-footer ul li a {
+        font-size: 25px;
+        color: black;
+    }
+
+
+    /*footer-right*/
+
+    .footer-right {
+        width:50%;
+        padding: 0.5rem 0rem 0.5rem 0rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .footer-right li {
+        padding-bottom: 0.6rem;
+    }
+}
+
+@media (max-width: 38rem){
+    /*Reseaux*/
+
+    .reseaux {
+        width: 0%;
+        font-size: 0px;
+    }
+
+    /*Logo*/
+
+    .logo {
+        width: 20%;
+    }
+
+    /*Connection/Deconnection*/
+
+    .signing {
+        width: 80%;
+    }
+}

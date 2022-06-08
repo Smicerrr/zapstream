@@ -17,7 +17,6 @@
 
 .body_actualites_all{
     display: flex;flex-flow: row wrap;
-
 }
 
 .body_actualites_single1 {
@@ -118,4 +117,10 @@
 }
 
 
+/*Responsive*/
 
+@media (max-width: 65rem) {
+    .body_actualites_single1 {
+        width: 100%;
+    }
+}
