@@ -44,25 +44,14 @@
 
         <div class="bottom-header">
            <ul>
-               <li><a href="">Actus</a></li>
+               <li><a href="{{ path('app_actu') }}">Actus</a></li>
                <li><a href="">Jeux</a></li>
                <li><a href="">Streamers</a></li>
            </ul>
         </div>
     </header>
-
-    <body>
-<li><a href="{{ path('app_home') }}">Home</a></li>
-                    {% if app.user %}
-                        {% endif %}
-                        <li><a href="{{ path('app_logout') }}">Déconnexion</a></li>
-                        <li><a href="{{ path('app_login') }}">Connexion</a></li>
-                        <li><a href="{{ path('app_register') }}">Inscription</a></li>
-                    
-        {% block body %}{% endblock %}
-
-
-
+        {% block body %}
+        {% endblock %}
     </body>
     <footer>
         <div class="footer-left">
