@@ -32,6 +32,7 @@ class UserFixtures extends Fixture
         $admin->setEmail('jeffrey.geromegnace@gmail.com');
         $admin->setRoles(['ROLE_USER', 'ROLE_ADMIN','ROLE_SUPER_ADMIN']);
         $admin->setToken('dfsfdsdf');
+        $admin->setAvatar('https://static-cdn.jtvnw.net/jtv_user_pictures/25da32b2-e646-4202-9814-c049e200fae3-profile_image-70x70.png');
         $hashpassword = $this->hasher->hashPassword($admin,'michel');
         $admin->setPassword($hashpassword);
         $manager->persist($admin);

@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Repository\UserRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -18,9 +19,9 @@ class UserController extends AbstractController
     }
 
     #[Route('/streamer', name: 'app_streamer')]
-    public function streamer(): Response
+    public function streamer(UserRepository $userRepository): Response
     {
-        $streamer = 'streamer';
+        $user = $this->getUser();
         return $this->render('user/streamer.html.twig', [
 
         ]);
