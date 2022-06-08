@@ -44,7 +44,7 @@
 
         <div class="bottom-header">
            <ul>
-               <li><a href="">Actus</a></li>
+               <li><a href="{{ path('app_actu') }}">Actus</a></li>
                <li><a href="">Jeux</a></li>
                <li><a href="{{ path('app_streamer') }}">Streamers</a></li>
            </ul>
@@ -52,15 +52,9 @@
     </header>
 
     <body>
-
-                    
         {% block body %}{% endblock %}
 
     </body>
-<<<<<<< HEAD
-
-    <footer>Footer</footer>
-=======
     <footer>
         <div class="footer-left">
             <li><a href="{{ path("app_home") }}"><img src="{{ asset('img/logo.png') }}"></a></li>
