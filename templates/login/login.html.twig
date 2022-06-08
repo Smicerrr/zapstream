@@ -3,22 +3,59 @@
 {% block title %}Hello LoginController!{% endblock %}
 
 {% block body %}
-{% if error %}
-        <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-    {% endif %}
 
-    <form action="{{ path('app_login') }}" method="post">
-        <label for="username">Email:</label>
-        <input type="text" id="username" name="_username" value="{{ last_username }}"/>
+<section id="body_login">
+    <div class="big_box_login">
+        <div class="box_register2">
+            <div class="msg_title_regist">
+                <h2> ENREGISTRE-TOI !</h2>
+                <p> Enregistre toi en un clic !</p>
+            </div>
+            <div class="button_form_regist">
+                <li><a href="{{ path('app_register') }}">S'INSCRIRE</a></li>
+            </div>
+        </div>
+        <div class="box_login2">
+            <div class="form_login">
+                <div class="msg_title_login">
+                <h2>CONNECTE-TOI !</h2>
+                </div>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="_password"/>
-        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+                <div class="mini_login">
+                <form action="{{ path('app_login') }}" method="post">
+                    {% if error %}
+                        <div id="error_cred">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                    {% endif %}
+                    <div class="box_regist_form_pseudo box_regist_form">
+                        <div class="regist_img_pseudo regist_img">
+                            <i class="fa-solid fa-at"></i>
+                        </div>
+                        <div class="regist_form_pseudo regist_form">
+                            <label for="username"></label>
+                            <input type="text" id="username" placeholder="Email" name="_username" value="{{ last_username }}"/>
+                        </div>
+                    </div>
 
-        {# If you want to control the URL the user is redirected to on success
-        <input type="hidden" name="_target_path" value="/account"/> #}
-
-        <button type="submit">login</button>
-    </form>
-
+                    <div class="box_regist_form_pseudo box_regist_form">
+                        <div class="regist_img_pseudo regist_img">
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+                        <div class="regist_form_pseudo regist_form">
+                            <label for="password"></label>
+                            <input type="password" id="password" placeholder="*********" name="_password"/>
+                            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+                        </div>
+                    </div>
+                    {# If you want to control the URL the user is redirected to on success
+                    <input type="hidden" name="_target_path" value="/account"/> #}
+                        <li><a href="{{ path('app_reset_password') }}">Mot de passe oublié</a></li>
+                        <div class="button_mini_log">
+                    <button type="submit">CONNEXION</button>
+                    </form>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}

@@ -10,6 +10,8 @@ import './styles/app.css';
 import './styles/streamer.css';
 import './styles/formRegister.css';
 import './styles/actus.css';
+import './styles/formLogin.css';
+
 
 // start the Stimulus application
 // import './bootstrap';
