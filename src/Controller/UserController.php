@@ -26,10 +26,24 @@ class UserController extends AbstractController
     #[Route('/streamer', name: 'app_streamer')]
     public function streamer(UserRepository $userRepository): Response
     {
-        $user = $this->getUser();
+        $streamers = $userRepository->findAll();
         return $this->render('user/streamer.html.twig', [
-
+            'streamers' => $streamers
         ]);
     }
 
+    #[Route('/streamer/one/{id}', name: 'app_one_streamer')]
+    public function single($id, UserRepository $userRepository): Response
+    {
+        $streamer = $userRepository->find($id);
+        //$twitch = $userRepository->findAll($twitchlink);
+        if(empty($streamer)) {
+            throw $this->createNotFoundException('Cet utilisateur n\'existe pas');
+        }
+
+        return $this->render('user/single-streamer.html.twig', [
+            'streamer' => $streamer,
+            //'twitch' => $twitch
+        ]);
+    }
 }
