@@ -1,0 +1,168 @@
+#profil_user{
+    display: flex;
+    background-color: #18183C;
+    justify-content: flex-end;
+    color: white;
+    font-size: 30px;
+}
+
+hr {
+    margin: 0.5rem;
+}
+
+.edit_profil_nav{
+    width: 50%;
+    
+}
+
+.edit_profil_nav a{
+    padding: 1rem;
+    
+}
+
+.edit_profil_nav_bg{
+    width: 30%;
+    height:100%;
+    background-color: #333360;
+}
+
+.edit_profil{
+    width: 100%;
+}
+
+#profil_user input{
+    color: white;
+    font-size: 20px;
+    border: 0;
+    background: transparent; 
+}
+
+.box_edit_profil{
+    display: flex;
+    justify-content: flex-end;
+    width:50%;
+    margin-right: 15rem;
+}
+
+.icon_edit_profil{
+    color: white;
+    width: 10%;
+}
+
+.edit_form{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10rem;
+    width : 100%;
+}
+
+.btn_edit_profil{
+    display: flex;
+    justify-content: center;
+}
+
+.btn_edit_profil button{
+    padding:0.5rem 2rem 0.5rem 2rem;
+    background-color: #A053CF;
+    border-radius: 15px;
+    font-size: 20px;
+    border: none;
+    margin: 1rem;
+}
+
+.btn_edit_profil button:hover{
+    color: white;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+@media (max-width: 1150px){
+    #profil_user{
+        display: flex;
+        background-color: #18183C;
+        justify-content: flex-end;
+        color: white;
+        font-size: 15px;
+    }
+    
+    hr {
+        margin: 0.5rem;
+    }
+    
+    .edit_profil_nav{
+        width: 50%;
+    }
+    
+    .edit_profil_nav a{
+        padding: 1rem;
+    }
+    
+    .edit_profil_nav_bg{
+        width: 100%;
+        height:100%;
+        background-color: #333360;
+    }
+    
+    .edit_profil{
+        display: flex;
+        padding-left: 1rem;
+        width: 100%;
+    }
+    
+    #profil_user input{
+        color: white;
+        font-size: 15px;
+        border: 0;
+        background: transparent; 
+    }
+    
+    
+    
+    .icon_edit_profil{
+        color: white;
+        width: 10%;
+    }
+    
+    
+    
+    .btn_edit_profil{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .btn_edit_profil button{
+        padding:0.5rem 2rem 0.5rem 2rem;
+        background-color: #A053CF;
+        border-radius: 15px;
+        font-size: 20px;
+        border: none;
+        margin: 1rem;
+    }
+    
+    .btn_edit_profil button:hover{
+        color: white;
+        transition: all 0.4s ease;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 650px){
+    .box_edit_profil{
+        margin-right: 0;
+        
+        display: flex;
+        width:80%;
+    }
+
+    .edit_profil_nav{
+        width: 20%;
+    }
+
+    .edit_form{
+        
+        display: flex;
+        justify-content: space-between;
+        margin-right: 10rem;
+        width : 70%;
+    }
+}

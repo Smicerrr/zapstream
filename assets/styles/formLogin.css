@@ -123,3 +123,18 @@
     transition: all 0.4s ease;
     cursor: pointer;
 }
+
+@media (max-width: 680px) {
+    .box_register2{
+        display: none;
+    }
+
+    .box_login2{
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+}

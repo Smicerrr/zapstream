@@ -1,0 +1,12 @@
+#body_security{
+    background-color: #18183C;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 100px;
+}
+
+#body_security i{
+    color: white;
+    font-size: 200px;
+}
