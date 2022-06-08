@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ZAP Stream - Streamer{% endblock %}
+
+{% block body %}
+
+    <div class="wrap">
+
+        <div id="page-single-streamer">
+            <a href="{{ path('app_streamer') }}">
+                <i class="fa-solid fa-arrow-left"></i>
+                Revenir aux streamers
+            </a>
+
+            <div id="heading-single-streamer">
+                <h1>Streamer : {{ streamer.pseudo }}</h1>
+            </div>
+
+            <section id="single-streamer">
+
+                <div class="single-streamer-infos shadow">
+                    {% if streamer.avatar %}
+                        <div class="single-streamers-infos-top">
+                            <div class="single-streamer-logo">
+                                <img src="{{ asset('upload/users/' ~ streamer.avatar) }}">
+                            </div>
+                            <div>
+                                <h1>{{ streamer.pseudo }}</h1>
+                                <p>{{ streamer.followers }} followers</p>
+                            </div>
+                        </div>
+
+                        <div class="single-streamer-infos-bottom">
+                            {% if streamer.description %}
+                                <p>{{ streamer.description }}</p>
+                            {% endif %}
+                            <div class="twitchlink">
+                                {% if streamer.twitchlink %}
+                                    <a href="">
+                                        <i class="fa-brands fa-twitch"></i><span> {{ streamer.twitchlink }}</span>
+                                    </a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% else %}
+                        <h1>{{ streamer.pseudo }}</h1>
+                    {% endif %}
+                </div>
+            </section>
+        </div>
+
+    </div>
+
+{% endblock %}
