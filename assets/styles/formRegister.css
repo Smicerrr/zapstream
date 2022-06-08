@@ -95,3 +95,13 @@
 #error_cred{
     color: white;
 }
+
+@media (max-width:680px){
+    .box_login{
+        display: none;
+    }
+
+    .box_register{
+        width: 100%;
+    }    
+}

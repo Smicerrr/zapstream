@@ -1,0 +1,12 @@
+#body_avatar{
+    background-color: #18183C;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 100px;
+}
+
+#body_avatar i{
+    color: white;
+    font-size: 200px;
+}
