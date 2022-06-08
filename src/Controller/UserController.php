@@ -46,22 +46,6 @@ class UserController extends AbstractController
             'streamers' => $streamers
         ]);
     }
-    #[Route('/avatar', name: 'app_avatar')]
-    public function modifAvatar(): Response
-    {
-        $avatar = 'avatar';
-        return $this->render('user/avatar.html.twig', [
-            'avatar' => $avatar
-        ]);
-    }
-    #[Route('/security', name: 'app_security')]
-    public function modifSecurity(): Response
-    {
-        $secu = 'security';
-        return $this->render('user/security.html.twig', [
-            'security' => $secu
-        ]);
-    }
 
     #[Route('/streamer/one/{id}', name: 'app_one_streamer')]
     public function single($id, UserRepository $userRepository): Response
@@ -75,6 +59,24 @@ class UserController extends AbstractController
         return $this->render('user/single-streamer.html.twig', [
             'streamer' => $streamer,
             //'twitch' => $twitch
+        ]);
+    }
+
+    #[Route('/avatar', name: 'app_avatar')]
+    public function modifAvatar(): Response
+    {
+        $avatar = 'avatar';
+        return $this->render('user/avatar.html.twig', [
+            'avatar' => $avatar
+        ]);
+    }
+
+    #[Route('/security', name: 'app_security')]
+    public function modifSecurity(): Response
+    {
+        $secu = 'security';
+        return $this->render('user/security.html.twig', [
+            'security' => $secu
         ]);
     }
 }
