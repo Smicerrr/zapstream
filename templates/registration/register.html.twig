@@ -4,88 +4,119 @@
 
 {% block body %}
 
+
 <section id="body_register">
 
-
-
-
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section id="register">
-    <div class="big_box_form">
-        <div class="box_button_connect">
+    <div class="big_box_register">
+        <div class="box_login">
             <div class="msg_title_connect">
-                <h1> CONNECTE-TOI !</h1>
+                <h2> CONNECTE-TOI !</h2>
                 <p> Reconnecte toi en un clic !</p>
             </div>
             <div class="button_form_connect">
                 <li><a href="{{ path('app_login') }}">Connexion</a></li>
             </div>
         </div>
-            <div class="box_regist_form">
-                <h1 class="msg_title_regist"> INSCRIS-TOI !</h1>
-                    {{ form_start(registrationForm) }}
-                    <div class="regist_form_pseudo">
-                        {{ form_row(registrationForm.pseudo) }}
-                    </div>
-                        <div class="regist_form_email">
-                            {{ form_row(registrationForm.email) }}
-                        </div>
-                            <div class="regist_form_password">
-                                {{ form_row(registrationForm.password, {
-                                    
-                                }) }}
-                            </div>
-                    
-                    {{ form_row(registrationForm.agreeTerms) }}
 
+        <div class="box_register">
+            <div class="form_register">
+                <h1> INSCRIS-TOI !</h1>
+                {{ form_start(registrationForm) }}
+
+                    <div class="box_regist_form_pseudo box_regist_form">
+                            <div class="regist_img_pseudo regist_img">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <div class="regist_form_pseudo regist_form">
+                                {{ form_row(registrationForm.pseudo) }}
+                            </div>
+                    </div>
+
+
+
+                    <div class="box_regist_form_email box_regist_form">
+                            <div class="regist_img_email regist_img">
+                                <i class="fa-solid fa-at"></i>
+                            </div>
+                            <div class="regist_form_email regist_form">
+                                {{ form_row(registrationForm.email) }}
+                            </div>
+                    </div>
+
+
+                    <div class="box_regist_form_password box_regist_form">
+                            <div class="regist_img_password regist_img">
+                                <i class="fa-solid fa-lock"></i>
+                            </div>
+                            <div class="regist_form_password regist_form">
+                                {{ form_row(registrationForm.password, {}) }}
+                            </div>
+                    </div>
+
+                    <div class="agree_form_register">
+                        {{ form_row(registrationForm.agreeTerms) }}
+                    </div>
+                    
                     <button type="submit" class="btn">Valider</button>
-                {{ form_end(registrationForm) }}
+                    {{ form_end(registrationForm) }}
             </div>
+        </div>
     </div>
+
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{# <section id="register">
+    <div class="big_box_form">
+        <div class="box_button_connect">
+
+            
+        </div>
+            <div class="box_regist_form">
+                
+                    
+    </div>
+</section> #}
 {% endblock %}

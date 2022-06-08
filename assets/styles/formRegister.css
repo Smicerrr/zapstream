@@ -1,6 +1,97 @@
 /* body */
 
 #body_register{
-    border: solid;
+    padding: 5rem 0rem 5rem 0rem;
+    justify-content: center;
+    display: flex;
     background-color: #18183C;
+}
+
+.big_box_register{
+    display: flex;
+    background-color: #282845;
+    width: 90%;
+    
+}
+
+.box_login{
+    padding: 2rem 0rem 4rem 0rem;
+    width: 30%;
+    background-color: #474687;
+    text-align: center;
+    
+}
+.form_register{
+    
+    width: 50%;
+}
+
+.box_register{
+    display: flex;
+    justify-content: center;
+    
+    width: 70%;
+    text-align: center;
+}
+
+.box_regist_form{
+    
+    display: flex;
+}
+.regist_form{
+    
+    width: 80%;
+}
+
+.msg_title_connect{
+    margin-bottom: 6rem;
+    color: white;
+}
+
+.msg_title_connect h2{
+    
+    padding-bottom: 0.8rem;
+}
+
+.button_form_connect li a{
+    padding:0.5rem 2rem 0.5rem 2rem;
+    background-color: #A053CF;
+    border-radius: 15px;
+}
+
+.box_register h1{
+    padding-top: 0.5rem;
+    color: white;
+}
+.box_register input{
+    padding: 0.2rem;
+    margin-top: 1rem;
+    width: 100%;
+}
+.agree_form_register{
+    color: white;
+}
+.regist_img{
+    
+    width :20%;
+    padding-top: 1rem;
+}
+.regist_img i{
+    color: white;
+}
+
+.box_register button{
+    padding:0.5rem 2rem 0.5rem 2rem;
+    background-color: #A053CF;
+    border-radius: 15px;
+    border: none;
+}
+
+.box_register button:hover{
+    color: #7d5d99;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+#error_cred{
+    color: white;
 }
