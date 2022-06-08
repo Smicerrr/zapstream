@@ -32,14 +32,23 @@ div#heading-streamer {
     padding-left: 1rem;
 }
 
-.row-streamer {
+#all-streamers {
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-between;
 }
 
-.row-streamer2 {
+.row-streamer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-flow: row wrap;
+    width: 50%;
+}
+
+.row-streamer a {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 .one-streamer {
@@ -50,16 +59,7 @@ div#heading-streamer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 47%;
-}
-
-.one-streamer2 {
-    padding: 2rem;
-    background-color: #393968;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 30%;
+    width: 80%;
 }
 
 .one-streamer img {
@@ -67,17 +67,66 @@ div#heading-streamer {
     border-radius: 50px;
 }
 
-.one-streamer2 img {
-    width: 100px; height: 100px;
-    border-radius: 50px;
-}
-
-.one-streamer2 {
-    margin: 3rem 0;
-}
-
 .shadow {
     -webkit-box-shadow: 0 10px 6px -6px black;
     -moz-box-shadow: 0 10px 6px -6px black;
     box-shadow: 0 10px 6px -6px black;
+}
+
+/* Single streamer */
+
+#page-single-streamer {
+    color: #fff;
+}
+
+#page-single-streamer i.fa-arrow-left {
+    padding-right: .7rem;
+}
+
+#heading-single-streamer {
+    text-align: center;
+}
+
+#single-streamer {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.twitchlink {
+    padding-top: 2rem;
+}
+
+#single-streamer a {
+    color: #7d5d99;
+    padding-top: 2rem;
+}
+
+#single-streamer a:hover {
+    color: #fff;
+}
+
+.single-streamer-infos {
+    background-color: #333360;
+    border-radius: 15px;
+    padding: 2rem;
+    width: 80%;
+}
+
+.single-streamers-infos-top {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.single-streamers-infos-top img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+
+.single-streamer-infos-bottom {
+    margin-top: .5rem;
+    padding: 1rem;
 }

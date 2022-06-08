@@ -11,49 +11,21 @@
                 <p><span>recent<i class="fa-solid fa-caret-down"></i></span><span>followers<i class="fa-solid fa-caret-down"></i></span></p>
             </div>
 
-            <div id="infos-streamers">
-
-                <div class="row-streamer">
-                    <div class="one-streamer shadow">
-                        <img src="{{ asset('img/spoit.jpg') }}">
-                        <p>Spoit - 123,1k followers</p>
+            <div id="all-streamers">
+                {% for streamer in streamers %}
+                    <div class="row-streamer">
+                        <a href="{{ path('app_one_streamer', {id: streamer.id }) }}">
+                            <div class="one-streamer shadow">
+                                {% if streamer.avatar %}
+                                    <img src="{{ asset('upload/users/' ~ streamer.avatar) }}">
+                                {% endif %}
+                                <p> {{ streamer.pseudo }} - {{ streamer.followers }} followers</p>
+                            </div>
+                        </a>
                     </div>
-
-                    <div class="one-streamer shadow">
-                        <img src="{{ asset('img/sharingan.png') }}">
-                        <p>ooziie - 39,6 followers</p>
-                    </div>
-                </div>
-
-                <div class="row-streamer">
-                    <div class="one-streamer shadow">
-                        <img src="{{ asset('img/sharingan.png') }}">
-                        <p>Godly - 20k followers</p>
-                    </div>
-
-                    <div class="one-streamer shadow">
-                        <img src="{{ asset('img/sharingan.png') }}">
-                        <p>Smicer - 9999999,9999999M followers</p>
-                    </div>
-                </div>
-
-                <div class="row-streamer">
-                    <div class="one-streamer shadow">
-                        <img src="{{ asset('img/sharingan.png') }}">
-                        <p>Pumix - 1 followers</p>
-                    </div>
-
-                    <div class="one-streamer shadow">
-                        <img src="{{ asset('img/sharingan.png') }}">
-                        <p>zodar - 0,01 followers</p>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </section>
     </div>
-
-
-
-
 
 {% endblock %}
