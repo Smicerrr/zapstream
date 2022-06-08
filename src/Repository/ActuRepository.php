@@ -39,20 +39,20 @@ class ActuRepository extends ServiceEntityRepository
         }
     }
 
-//    /**
-//     * @return Actu[] Returns an array of Actu objects
-//     */
-//    public function findByExampleField($value): array
-//    {
-//        return $this->createQueryBuilder('a')
-//            ->andWhere('a.exampleField = :val')
-//            ->setParameter('val', $value)
+    /**
+     * @return Actu[] Returns an array of Actu objects
+     */
+    public function findByMaxNumber(): array
+    {
+        return $this->createQueryBuilder('a')
+          //  ->andWhere('a.exampleField = :val')
+            //->setParameter('val', $value)
 //            ->orderBy('a.id', 'ASC')
-//            ->setMaxResults(10)
-//            ->getQuery()
-//            ->getResult()
-//        ;
-//    }
+            ->setMaxResults(2)
+            ->getQuery()
+            ->getResult()
+        ;
+    }
 
 //    public function findOneBySomeField($value): ?Actu
 //    {
