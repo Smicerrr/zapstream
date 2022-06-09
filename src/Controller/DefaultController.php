@@ -17,7 +17,7 @@ class DefaultController extends AbstractController
         $streamers = $userRepository->findByMaxNumber();
         return $this->render('default/home.html.twig', [
             'actualites' => $actualites,
-            'streamers' => $streamers,
+            'streamers' => $streamers
         ]);
     }
 
