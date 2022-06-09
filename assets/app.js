@@ -16,6 +16,7 @@ import './styles/editUser.css';
 import './styles/security.css';
 import './styles/avatar.css';
 import './styles/404.css';
+import './styles/createPost.css';
 
 
 // start the Stimulus application

@@ -1,0 +1,72 @@
+#body_create_publication{
+    display: flex;
+    background-color: #18183C;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+    padding: 2rem;
+}
+
+.box_icon_pseudo{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.box_icon_pseudo h3{
+    text-align: flex-start;
+}
+
+.big_box_form_create_publication{
+    width :70%;
+}
+
+.box_button_create_publication{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 400px;
+}
+
+.box_form_create_publication{
+    
+    text-align: center;
+}
+
+.create_publication_form_title input{
+    margin: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    width :45%;
+}
+.create_publication_form_description textarea{
+    resize: none;
+    height :200px;
+    margin: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    width :80%;
+}
+
+.button_category_create{
+    box-sizing: 10px;
+}
+
+.box_valid_create_publication{
+    width :40%;
+    display: flex;
+    justify-content: center;
+}
+
+.box_valid_create_publication button{
+    padding:0.5rem 2rem 0.5rem 2rem;
+    background-color: #A053CF;
+    border-radius: 15px;
+    border: none;
+}
+
+.box_valid_create_publication button:hover{
+    color: #7d5d99;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
