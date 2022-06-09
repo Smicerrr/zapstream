@@ -19,7 +19,10 @@
                                 {% if streamer.avatar %}
                                     <img src="{{ asset('upload/users/' ~ streamer.avatar) }}">
                                 {% endif %}
-                                <p> {{ streamer.pseudo }} - {{ streamer.followers }} followers</p>
+                                <p> {{ streamer.pseudo }}
+                                    {% if streamer.followers %}
+                                        {{ streamer.followers }} - followers</p>
+                                    {% endif %}
                             </div>
                         </a>
                     </div>
