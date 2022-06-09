@@ -1,0 +1,34 @@
+/*Header*/
+
+.body_game{
+    background-color: #18183C;
+    color: white;
+}
+
+.body_game_all {
+    border: solid;
+}
+
+.body_game_single1 {
+    border: solid white;
+}
+
+.body_game_single2 {
+    border: solid red;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 5rem;
+}
+
+.body_game_single2_left {
+    border: solid cyan;
+}
+
+.body_game_single2_right {
+    border: solid cyan;
+}
+
+.body_game_single2_extreme_right {
+    border: solid cyan;
+}

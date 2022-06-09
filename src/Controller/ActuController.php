@@ -13,7 +13,7 @@ class ActuController extends AbstractController
     #[Route('/actu', name: 'app_actu')]
     public function index(ActuRepository $actuRepository): Response
     {
-        $actualites = $actuRepository->findAll();
+
         return $this->render('actu/actu.html.twig', [
             'actualites' => $actualites,
         ]);

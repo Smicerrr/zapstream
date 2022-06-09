@@ -18,6 +18,7 @@ import './styles/avatar.css';
 import './styles/404.css';
 import './styles/home.css';
 import './styles/createPost.css';
+import './styles/game.css';
 
 
 // start the Stimulus application
