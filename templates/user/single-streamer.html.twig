@@ -20,37 +20,36 @@
 
                 <div class="single-streamer-infos shadow">
 
-                        <div class="single-streamers-infos-top">
-                            {% if streamer.avatar %}
-                                <div class="single-streamer-logo">
-                                    <img src="{{ asset('upload/users/' ~ streamer.avatar) }}">
-                                </div>
-                            {% else %}
-                                <div class="single-streamer-logo">
-                                    <img src="{{ asset('img/user.png')}}">
-                                </div>
-                            {% endif %}
-                            <div>
-                                <h1>{{ streamer.pseudo }}</h1>
-                                {% if streamer.followers %}
-                                    <p>{{ streamer.followers }} followers</p>
-                                {% endif %}
+                    <div class="single-streamers-infos-top">
+                        {% if streamer.avatar %}
+                            <div class="single-streamer-logo">
+                                <img src="{{ asset('upload/users/' ~ streamer.avatar) }}">
                             </div>
-                        </div>
-
-                        <div class="single-streamer-infos-bottom">
-                            {% if streamer.description %}
-                                <p>{{ streamer.description }}</p>
-                            {% endif %}
-                            <div class="twitchlink">
-                                {% if streamer.twitchlink %}
-                                    <a target="_blank" href="{{ streamer.twitchlink }}">
-                                        <i class="fa-brands fa-twitch"></i> <span> {{ streamer.twitchlink }}</span>
-                                    </a>
-                                {% endif %}
+                        {% else %}
+                            <div class="single-streamer-logo">
+                                <img src="{{ asset('img/user.png')}}">
                             </div>
+                        {% endif %}
+                        <div>
+                            <h1>{{ streamer.pseudo }}</h1>
+                            {% if streamer.followers %}
+                                <p>{{ streamer.followers }} followers</p>
+                            {% endif %}
                         </div>
+                    </div>
 
+                    <div class="single-streamer-infos-bottom">
+                        {% if streamer.description %}
+                            <p>{{ streamer.description }}</p>
+                        {% endif %}
+                        <div class="twitchlink">
+                            {% if streamer.twitchlink %}
+                                <a target="_blank" href="{{ streamer.twitchlink }}">
+                                    <i class="fa-brands fa-twitch"></i> <span> {{ streamer.twitchlink }}</span>
+                                </a>
+                            {% endif %}
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>

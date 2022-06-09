@@ -16,18 +16,20 @@
                     <div class="row-streamer">
                         <a href="{{ path('app_one_streamer', {id: streamer.id }) }}">
                             <div class="one-streamer shadow">
-                                {% if streamer.avatar %}
-                                    <img src="{{ asset('upload/users/' ~ streamer.avatar) }}">
-                                {% else %}
-                                    <img src="{{ asset('img/user.png') }}">
-                                {% endif %}
-                                <p> {{ streamer.pseudo }}
-                                    {% if streamer.followers %}
-                                        {{ streamer.followers }} - followers
-                                    {% else %}
-                                         0 - followers
+                                <div>
+                                    {% if streamer.avatar %}
+                                        <img src="{{ asset('upload/users/' ~ streamer.avatar) }}">
+                                        {% else %}
+                                            <img src="{{ asset('img/user.png') }}">
                                     {% endif %}
-                                </p>
+                                </div>
+                                <div>
+                                    <p> {{ streamer.pseudo }}
+                                        {% if streamer.followers %}
+                                            {{ streamer.followers }} - followers
+                                        {% endif %}
+                                    </p>
+                                </div>
                             </div>
                         </a>
                     </div>

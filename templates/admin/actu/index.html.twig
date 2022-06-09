@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Zapstream - Admin Actu{% endblock %}
+
+{% block body %}
+
+    <h1>Admin Actu</h1>
+
+    {% for actu in actus %}
+        <p>{{ actu.title }}</p>
+    {% endfor %}
+
+{% endblock %}

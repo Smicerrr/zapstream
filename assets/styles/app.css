@@ -68,6 +68,12 @@ header {
     max-width: 100px;
 }
 
+.logo ul {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
 /*Connection/Deconnection*/
 
 .signing {
