@@ -18,6 +18,8 @@
                             <div class="one-streamer shadow">
                                 {% if streamer.avatar %}
                                     <img src="{{ asset('upload/users/' ~ streamer.avatar) }}">
+                                {% else %}
+                                    <img src="{{ asset('img/user.png') }}">
                                 {% endif %}
                                 <p> {{ streamer.pseudo }}
                                     {% if streamer.followers %}
