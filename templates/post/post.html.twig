@@ -4,6 +4,38 @@
 
 {% block body %}
 
-    <h1>Hello {{ controller_name }}! ✅</h1>
+<section id="body_create_publication">
+    <div class="big_box_form_create_publication">
+
+        <div class="box_button_create_publication">
+            <div class="button_category_create_publication button_category_create">Categorie</div>
+            <div class="button_gamename_create_publication button_category_create">Nom de jeu</div>
+        </div>
+        <div class="box_icon_pseudo">
+            <div class="create_publication_pseudo">
+                <p>Pseudo</p>
+            </div>
+                <p>Créer une publication</p>
+            <div class="create_publication_icon">
+                <img src="">
+            </div>
+        </div>
+            <div class="box_form_create_publication">
+                {{ form_start(form) }}
+                <div class="create_publication_form_title">
+                    {{ form_row(form.title) }}
+                </div>
+
+                <div class="create_publication_form_description"
+                    {{ form_row(form.description) }}
+                </div>
+                
+                <div class="box_valid_create_publication">
+                    <button type="submit" class="button_create_publication">Valider</button>
+                </div>
+                {{ form_end(form) }}
+            </div>
+    </div>    
+</section>
 
 {% endblock %}
