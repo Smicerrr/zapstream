@@ -5,30 +5,66 @@
     color: white;
 }
 
-.body_game_all {
-    border: solid;
-}
-
-.body_game_single1 {
-    border: solid white;
-}
-
 .body_game_single2 {
-    border: solid red;
     display: flex;
     justify-content: center;
     width: 100%;
     padding-bottom: 5rem;
 }
 
-.body_game_single2_left {
-    border: solid cyan;
+.body_game_single3 {
+    width: 90%;
+    display: flex;
+    background-color: #494963;
+    border-radius: 15px;
+
 }
+
+/*Left*/
+
+.body_game_single2_left {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 0rem 0.5rem 0rem;
+    width: 20%;
+}
+
+.body_game_single2_left img {
+    max-width: 130px;
+    border: solid black 1px;
+    border-radius: 100px;
+}
+
+/*Right*/
 
 .body_game_single2_right {
-    border: solid cyan;
+    width: 70%;
 }
 
+.body_game_single2_right_top {
+    display: flex;
+    padding: 1rem 0rem 1.5rem 0rem;
+}
+
+.body_game_single2_right_top_left{
+    width: 50%;
+}
+
+.body_game_single2_right_top_right{
+    width: 50%;
+}
+
+/*Extreme Right*/
+
 .body_game_single2_extreme_right {
-    border: solid cyan;
+    display: flex;
+    width: 10%;
+}
+
+.body_game_single2_extreme_right i {
+    color: black;
+    font-size: 30px;
+    padding-top: 1.5rem;
+    margin-left: 5rem;
+
 }
