@@ -8,29 +8,29 @@
             {% for game in games %}
                 <div class="body_game_single1">
                     <div class="body_game_single2">
-                        <div class="body_game_single2_left">
-                            <img src="{{ asset('upload/game/' ~ game.image) }}"">
-                        </div>
-                        <div class="body_game_single2_right">
-                            <div class="body_game_single2_right_top">
-                                <div class="body_game_single2_right_top_left">
-                                    <h4>{{ game.title }}</h4>
+                        <div class="body_game_single3">
+                            <div class="body_game_single2_left">
+                                <img src="{{ asset('upload/game/' ~ game.image) }}"">
+                            </div>
+                            <div class="body_game_single2_right">
+                                <div class="body_game_single2_right_top">
+                                    <div class="body_game_single2_right_top_left">
+                                        <h4>{{ game.title }}</h4>
+                                    </div>
+                                    <div class="body_game_single2_right_top_right">
+                                        <h4>Publications : nbr</h4>
+                                    </div>
                                 </div>
-                                <div class="body_game_single2_right_top_right">
-                                    <h4>Publications : nbr</h4>
+                                <div class="body_game_single2_right_bottom">
+                                    <p>{{ game.description }}</p>
                                 </div>
                             </div>
-                            <div class="body_game_single2_right_bottom">
-                                <p>{{ game.description }}</p>
+                            <div class="body_game_single2_extreme_right">
+                                <i class="fa-solid fa-angle-right"></i>
                             </div>
-                        </div>
-                        <div class="body_game_single2_extreme_right">
-                            <i class="fa-solid fa-angle-right"></i>
                         </div>
                     </div>
                 </div>
-
-
 
             {% endfor %}
         </div>
