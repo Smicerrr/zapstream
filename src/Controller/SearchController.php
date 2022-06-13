@@ -48,12 +48,16 @@ class SearchController extends AbstractController
     {
         //dd($request);
         //$query = $request->request->get('form');
-        $query = $request->request->all('form')['query'] ;
 
-        if($query) {
+        if(!empty($request->request->all('form')['query'])) {
+            $query = $request->request->all('form')['query'];
+        }
+
+
+        if(!empty($query)) {
             $games = $gameRepository->findGamesByName($query);
-        } else {
-            $games = [];
+        } elseif (empty($query)) {
+            $games = ['aucun jeu'];
         }
         return $this->render('search/index.html.twig', [
             'games' => $games

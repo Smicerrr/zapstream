@@ -33,7 +33,6 @@
 
 @media (max-width:800px) {
     .body_actualite_bottom{
-        border: solid red;
         flex-direction: column;
     }
     .body_actualite_bottom_left{

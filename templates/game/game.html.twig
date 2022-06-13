@@ -7,19 +7,14 @@
         <div class="body_game">
             <div class="body_game_searchbar">
                 <div class="body_game_searchbar2">
-                    <div class="body_game_searchbar_left">
-                        {{ render(controller('App\\Controller\\SearchController::searchBar')) }}
-                    </div>
-                    <div class="body_game_searchbar_right">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </div>
+                    {{ render(controller('App\\Controller\\SearchController::searchBar')) }}
                 </div>
             </div>
             <div class="body_game_all">
             {% for game in games %}
                 <div class="body_game_single1">
                     <div class="body_game_single2">
-                        <div class="body_game_single3">
+                        <a class="body_game_single3" href="{{ path('app_one_actu', {id: game.id }) }}">
                             <div class="body_game_single2_left">
                                 <img src="{{ asset('upload/game/' ~ game.image) }}">
                             </div>
@@ -39,7 +34,7 @@
                             <div class="body_game_single2_extreme_right">
                                 <i class="fa-solid fa-angle-right"></i>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             {% endfor %}
