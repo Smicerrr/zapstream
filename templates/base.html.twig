@@ -26,7 +26,9 @@
                 <ul>
                     <li><a href="{{ path("app_home") }}"><img src="{{ asset('img/logo.png') }}"></a></li>
                     {% if is_granted('ROLE_ADMIN') %}
-                        <li><a href="{{ path('admin_dashboard') }}">Admin</a></li>
+                        <li><a href="{{ path('admin_dashboard') }}">Admin dashboard</a></li>
+                        <li><a href="{{ path('app_admin_actu_index') }}">Admin actus</a></li>
+                        <li><a href="{{ path('app_admin_game_index') }}">Admin jeux</a></li>
                     {% endif %}
                 </ul>
             </div>

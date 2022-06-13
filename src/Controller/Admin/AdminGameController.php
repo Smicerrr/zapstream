@@ -2,7 +2,7 @@
 
 namespace App\Controller\Admin;
 
-use App\Repository\GamesRepository;
+use App\Repository\GameRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -11,10 +11,11 @@ use Symfony\Component\Routing\Annotation\Route;
 class AdminGameController extends AbstractController
 {
     #[Route('/', name: 'app_admin_game_index')]
-    public function index(GamesRepository $gameRepository): Response
+    public function index(GameRepository $gameRepository): Response
     {
+        $games = $gameRepository->findAll();
         return $this->render('admin/game/index.html.twig', [
-            'games' => $gameRepository->findAll(),
+            'games' => $games
         ]);
     }
 
