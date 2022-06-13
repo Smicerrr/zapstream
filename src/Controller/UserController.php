@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use Gumlet\ImageResize;
 use App\Repository\UserRepository;
 use App\Entity\User;
 use App\Form\EditUserType;
@@ -77,7 +78,9 @@ class UserController extends AbstractController
                 } catch (FileException $e) {
                     // ... handle exception if something happens during file upload
                 }
-
+                $image = new ImageResize($this->getParameter('avatar_directory') . '/' . $newFilename);
+                $image->crop(200, 200, true, ImageResize::CROPCENTER);
+                $image->save($this->getParameter('avatar_directory') . '/' . $newFilename);
                 // updates the 'brochureFilename' property to store the PDF file name
                 // instead of its contents
                 $user->setAvatar($newFilename);
@@ -96,6 +99,10 @@ class UserController extends AbstractController
         return $this->renderForm('user/avatar.html.twig', [
             'addAvatar' => $form,
         ]);
+    }
+    public function getTargetDirectory()
+    {
+        return $this->targetDirectory;
     }
 
     #[Route('/security', name: 'app_security')]
