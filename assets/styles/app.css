@@ -277,6 +277,17 @@ footer {
     }
 }
 
+@media (max-width: 1050px){
+    .footer-right p{
+        display: none;
+    }
+    .footer-right li a{
+        display:flex;
+        justify-content: flex-end;
+        margin-right: 5rem;
+    }
+}
+
 @media (max-width: 38rem){
     /*Reseaux*/
 

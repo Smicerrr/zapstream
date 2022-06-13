@@ -4,54 +4,55 @@
 
 {% block body %}
 
-<section id="profil_user">
-
-<div class="edit_profil_nav">
-    <div class="edit_profil_nav_bg">
-        <p>    <a href="{{ path('app_security')}}">Securité</a> </p>
-        <p>    <a href="{{ path('app_avatar')}}">Avatar</a> </p>
-    </div>
-</div>
-
-    <div class="box_edit_profil">
-        <div class="edit_profil">
-            {{ form_start(editForm) }}
-                    <div class="edit_form_pseudo edit_form">
-                    <p>Pseudo<p>
-                        {{ form_row(editForm.pseudo) }}
-                        <div class="icon_edit_profil_pseudo icon_edit_profil">
-                            <i class="fa-solid fa-pencil"></i>
-                        </div>
-                    </div>
-            <hr>
-                    <div class="edit_form_description edit_form">
-                    <p>Description<p>
-                        {{ form_row(editForm.description) }}
-                        <div class="icon_edit_profil_description icon_edit_profil">
-                            <i class="fa-solid fa-pencil"></i>
-                        </div>
-                    </div>
-            <hr>
-                    <div class="edit_form_email edit_form">
-                    <p>Email<p>
-                        {{ form_row(editForm.email) }}
-                        <div class="icon_edit_profil_email icon_edit_profil">
-                            <i class="fa-solid fa-pencil"></i>
-                        </div>
-                    </div>
-            <hr>
-                    <div class="edit_form_followers edit_form">
-                    <p>Nombre de followers<p>
-                        {{ form_row(editForm.followers) }}
-                        <div class="icon_edit_profil_followers icon_edit_profil">
-                            <i class="fa-solid fa-pencil"></i>
-                        </div>
-                    </div>
-                    <div class="btn_edit_profil">
-                        <button type="submit" class="btn">Valider</button>
-                    </div>
-            {{ form_end(editForm) }}
+<section id="body_profil_user">
+    <div class="big_box_edit_profil">
+        <div class="edit_profil_nav">
+            <div class="edit_profil_nav_bg">
+                <p>    <a href="{{ path('app_security')}}">Securité</a> </p>
+                <p>    <a href="{{ path('app_avatar')}}">Avatar</a> </p>
+            </div>
         </div>
+
+            <div class="box_edit_profil">
+                <div class="edit_profil">
+                    {{ form_start(editForm) }}
+                            <div class="edit_form_pseudo edit_form">
+                            <p>Pseudo<p>
+                                {{ form_row(editForm.pseudo) }}
+                                <div class="icon_edit_profil_pseudo icon_edit_profil">
+                                    <i class="fa-solid fa-pencil"></i>
+                                </div>
+                            </div>
+                    <hr>
+                            <div class="edit_form_description edit_form">
+                            <p>Description<p>
+                                {{ form_row(editForm.description) }}
+                                <div class="icon_edit_profil_description icon_edit_profil">
+                                    <i class="fa-solid fa-pencil"></i>
+                                </div>
+                            </div>
+                    <hr>
+                            <div class="edit_form_email edit_form">
+                            <p>Email<p>
+                                {{ form_row(editForm.email) }}
+                                <div class="icon_edit_profil_email icon_edit_profil">
+                                    <i class="fa-solid fa-pencil"></i>
+                                </div>
+                            </div>
+                    <hr>
+                            <div class="edit_form_followers edit_form">
+                            <p>Followers<p>
+                                {{ form_row(editForm.followers) }}
+                                <div class="icon_edit_profil_followers icon_edit_profil">
+                                    <i class="fa-solid fa-pencil"></i>
+                                </div>
+                            </div>
+                            <div class="btn_edit_profil">
+                                <button type="submit" class="btn">Valider</button>
+                            </div>
+                    {{ form_end(editForm) }}
+                </div>
+            </div>
     </div>
 </section>
 

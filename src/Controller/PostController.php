@@ -20,8 +20,6 @@ class PostController extends AbstractController
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             // encode the plain password
-            $post->setTitle('title');
-            $post->setDescription('description');
             $newDate = new \DateTimeImmutable;
             $post->setCreatedAt($newDate);
             $post->setModifiedAt($newDate);

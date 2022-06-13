@@ -2,6 +2,8 @@
 
 #body_register{
     padding: 5rem 0rem 5rem 0rem;
+    padding-top:15rem;
+    padding-bottom:15rem;
     justify-content: center;
     display: flex;
     background-color: #18183C;
@@ -29,7 +31,7 @@
 .box_register{
     display: flex;
     justify-content: center;
-    
+    padding-bottom: 2rem;
     width: 70%;
     text-align: center;
 }
@@ -96,12 +98,31 @@
     color: white;
 }
 
-@media (max-width:680px){
+@media (max-width:1600px){
+}
+@media (max-width:800px){
     .box_login{
         display: none;
     }
-
     .box_register{
         width: 100%;
-    }    
+    }
+}
+@media (max-width:400px){
+    #body_register h1{
+        font-size: 20px;
+    }
+    #body_register input{
+        font-size: 10px;
+        padding: none;
+    }
+}
+@media (max-width:350px){
+    #body_register h1{
+        font-size: 15px;
+    }
+    #body_register input{
+        font-size: 10px;
+        padding: none;
+    }
 }

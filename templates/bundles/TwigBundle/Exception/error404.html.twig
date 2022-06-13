@@ -5,10 +5,11 @@
 <section id="body_404_not_found">
     <div class="error_404">
         <div class="icon_404">
-            <a href="{{ path('app_home') }}"> <img src="https://cdn-icons.flaticon.com/png/512/3551/premium/3551629.png?token=exp=1654694574~hmac=4dd58860ad3bfaac09c4a44799f6ed83"/> </a>
+            <a href="{{ path('app_home') }}"> <img src="{{ asset('upload/404/404.png')}}"/> </a>
         </div>
-        <p>
-            L'URL de cette page na pas pu etre trouvé. Veuillez vous diriger dans cette direction. <a href="{{ path('app_home') }}">Cliquer-ici</a>
+        <p class="error_404_msg">
+            L'URL de cette page na pas pu etre trouvé. Veuillez vous diriger dans cette direction. 
+            <a class="btn btn_error404" href="{{ path('app_home') }}">Cliquer-ici</a>
             
         </p>
     </div>

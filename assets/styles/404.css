@@ -1,11 +1,12 @@
 #body_404_not_found{
     background-color: #18183C;
     color: white;
+    padding-top:15rem;
+    padding-bottom:15rem;
     text-align: center;
     font-size: 45px;
     display: flex;
     justify-content: center;
-    padding: 1rem;
 }
 #body_404_not_found p a{
     box-sizing: content-box;
@@ -23,9 +24,33 @@
     width: 50%;
 }
 
+p{
+    padding-bottom: 2rem;
+}
+
+a{
+    margin-top: 2rem;
+}
+
+.btn_error404{
+    display: flex;
+    justify-content: center;
+}
+
 .icon_404 img{
     height: 150px;
     background-color: white;
+}
+
+@media(max-width:700px){
+    .btn_error404{
+        display: flex;
+        justify-content: center;
+    }
+    p{
+        padding: 2px;
+        font-size: 20px;
+    }
 }
 
 

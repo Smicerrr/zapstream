@@ -84,6 +84,13 @@
     padding-bottom: 2rem;
 }
 
-
+@media(max-width:650px) {
+    h2{
+        font-size: 15px;
+    }
+    h4{
+        font-size: 12px;
+    }
+}
 
 
