@@ -12,7 +12,6 @@
         <meta name="author" content="">
 
         <title>Zapstream - Admin User</title>
-
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <link href="{{ asset('bootstrap/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
@@ -70,10 +69,10 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Entités :</h6>
-                        <a class="collapse-item" href="{{ path('app_admin_user_index') }}">User</a>
-                        <a class="collapse-item" href="">Actus</a>
-                        <a class="collapse-item" href="">Jeux</a>
-                        <a class="collapse-item" href="">Publications</a>
+                        <a class="collapse-item" href="{{ path('app_admin_user_index') }}">Users</a>
+                        <a class="collapse-item" href="{{ path('app_admin_actu_index') }}">Actus</a>
+                        <a class="collapse-item" href="{{ path('app_admin_game_index') }}">Jeux</a>
+                        <a class="collapse-item" href="{{ path('app_admin_post_index') }}">Publications</a>
                     </div>
                 </div>
             </li>
@@ -390,6 +389,7 @@
                                         <th>Token</th>
                                         <th>Description</th>
                                         <th>Twitch Link</th>
+                                        <th>Created At</th>
                                         <th>Actions</th>
                                     </tr>
                                     </thead>
@@ -402,6 +402,7 @@
                                         <th>Token</th>
                                         <th>Description</th>
                                         <th>Twitch Link</th>
+                                        <th>Created At</th>
                                         <th>Actions</th>
                                     </tr>
                                     </tfoot>
@@ -415,6 +416,7 @@
                                         <td>{{ user.token }}</td>
                                         <td>{{ user.description }}</td>
                                         <td>{{ user.twitchLink }}</td>
+                                        <td>{{ user.createdAt|date('d-m-Y') }}</td>
                                     </tr>
                                     </tbody>
                                     {% endfor %}

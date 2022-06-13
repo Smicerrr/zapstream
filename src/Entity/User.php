@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
@@ -53,10 +55,23 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(type: 'datetime_immutable')]
     private $created_at;
 
-    public function __construct ()
+    #[ORM\OneToMany(mappedBy: 'user', targetEntity: Post::class)]
+    private $posts;
+
+    #[ORM\OneToMany(mappedBy: 'user', targetEntity: Actu::class)]
+    private $actus;
+
+    #[ORM\OneToMany(mappedBy: 'user', targetEntity: Game::class)]
+    private $games;
+
+    public function __construct()
     {
         $this->setCreatedAt(new \DateTimeImmutable());
+        $this->posts = new ArrayCollection();
+        $this->actus = new ArrayCollection();
+        $this->games = new ArrayCollection();
     }
+
     public function getId(): ?int
     {
         return $this->id;
@@ -81,7 +96,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     public function getUserIdentifier(): string
     {
-        return (string) $this->email;
+        return (string)$this->email;
     }
 
     /**
@@ -219,6 +234,96 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setCreatedAt(\DateTimeImmutable $created_at): self
     {
         $this->created_at = $created_at;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Post>
+     */
+    public function getPosts(): Collection
+    {
+        return $this->posts;
+    }
+
+    public function addPost(Post $post): self
+    {
+        if (!$this->posts->contains($post)) {
+            $this->posts[] = $post;
+            $post->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removePost(Post $post): self
+    {
+        if ($this->posts->removeElement($post)) {
+            // set the owning side to null (unless already changed)
+            if ($post->getUser() === $this) {
+                $post->setUser(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Actu>
+     */
+    public function getActus(): Collection
+    {
+        return $this->actus;
+    }
+
+    public function addActu(Actu $actu): self
+    {
+        if (!$this->actus->contains($actu)) {
+            $this->actus[] = $actu;
+            $actu->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeActu(Actu $actu): self
+    {
+        if ($this->actus->removeElement($actu)) {
+            // set the owning side to null (unless already changed)
+            if ($actu->getUser() === $this) {
+                $actu->setUser(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Game>
+     */
+    public function getGames(): Collection
+    {
+        return $this->games;
+    }
+
+    public function addGame(Game $game): self
+    {
+        if (!$this->games->contains($game)) {
+            $this->games[] = $game;
+            $game->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeGame(Game $game): self
+    {
+        if ($this->games->removeElement($game)) {
+            // set the owning side to null (unless already changed)
+            if ($game->getUser() === $this) {
+                $game->setUser(null);
+            }
+        }
 
         return $this;
     }
