@@ -1,67 +1,120 @@
 /*header*/
 
 .body_actualites {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
     color: white;
     width: 100%;
     background-color: #18183C;
 }
-.body_actualites h1{
-    text-align: center;
-}
 
-.all_actus{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-}
-
-.body_actualites_all{
-    
-    flex-flow: row wrap;
-    width: 100%;
+.body_actualites_top {
     display: flex;
     justify-content: center;
+    padding: 2.5rem 0rem;
 }
-.body_actualites_img{
+
+/*Actus*/
+
+.body_actualites_bottom {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5rem;
+}
+
+.body_actualites_single1 {
+    width: 95%;
+    display: flex;
+    flex-flow: row wrap;
+
+}
+
+.body_actualites_single2 {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5rem;
+}
+
+.body_actualites_single3 {
+    border: solid black 3px;
+    width: 80%;
+    background-color: #494963;
+    border-radius: 5px;
+}
+
+.body_actualites_img {
     width: 100%;
 }
 
-.body_actualites_img img{
+.body_actualites_img img {
     width: 100%;
-}
-
-.body_actualites_single1{
-    width: 45%;
-    text-align: center;
-}
-
-.body_actualites_single2{
-    
-    
-    text-align: center;
-    justify-content: space-between;
-}
-
-.row_wrap_actualites{
-    border: solid red;
+    border-radius: 5px;
 }
 
 
-@media(max-width:750px) {
-    .body_actualites{
-        padding-bottom: 10rem;
+.body_actualites_title {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0rem;
+}
+
+@media (max-width: 700px) {
+    /*header*/
+
+    .body_actualites {
+        color: white;
+        width: 100%;
+        background-color: #18183C;
     }
-}
 
-@media (max-width:450px) {
-    .body_actualites{
-        padding-bottom: 10rem;
+    .body_actualites_top {
+        display: flex;
+        justify-content: center;
+        padding: 2.5rem 0rem;
     }
-}
-@media (max-width:350px) {
-    .body_actualites{
-        padding-bottom: 10rem;
+
+    /*Actus*/
+
+    .body_actualites_bottom {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 5rem;
     }
+
+    .body_actualites_single1 {
+        width: 95%;
+        display: flex;
+        flex-flow: row wrap;
+
+    }
+
+    .body_actualites_single2 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 5rem;
+    }
+
+    .body_actualites_single3 {
+        border: solid black 3px;
+        width: 80%;
+        background-color: #494963;
+        border-radius: 5px;
+    }
+
+    .body_actualites_img {
+        width: 100%;
+    }
+
+    .body_actualites_img img {
+        width: 100%;
+        border-radius: 5px;
+    }
+
+
+    .body_actualites_title {
+        display: flex;
+        justify-content: center;
+        padding: 1rem 0rem;
+    }
+
 }

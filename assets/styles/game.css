@@ -5,6 +5,8 @@
     color: white;
 }
 
+
+
 .body_game_single2 {
     display: flex;
     justify-content: center;
@@ -22,55 +24,58 @@
 
 /*ShearchBar*/
 
-.body_game_searchbar{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 2rem 0rem 2rem 0rem;
+.body_game_searchbar {
+    display: flex;justify-content: center;
 }
 
-.body_game_searchbar2{
-    border: solid red;
-    border: solid black 3px;
-    display: flex;;
+.body_game_searchbar2 {
     width: 90%;
 }
 
-#box_recherche_barre form{
-    width: 100%;
+.body_game_searchbar3 {
     display: flex;
-
-}
-
-.body_game_searchbar_right button{
-    padding: 1rem;
+    padding: 5rem 0rem;
 }
 
 .body_game_searchbar_left {
-    width: 95%;
+    width: 90%;
+}
+
+.body_game_searchbar_left input {
+    padding: 1rem 0rem;
+    width: 100%;
+    border: solid black 5px;
+    padding-left: 1rem;
 }
 
 .body_game_searchbar_right {
-    background-color: white;
-    color: black;
-    width: 5%;
-    font-size: 35px;
+    width: 10%;
 }
 
-#form_query {
+.body_game_searchbar_right button {
     border: none;
+    background-color: #494963;
     width: 100%;
-    padding: 1rem;
+    margin-top: 2.5px;
+    padding: 0.9rem 0rem;
 }
 
-.btn-primary {
+.body_game_searchbar_right button:hover {
+    filter: brightness(1.75);
+    transition: all 0.4s ease;
+}
+
+.body_game_searchbar_right i {
+    font-size: 25px;
+}
+
+.body_game_searchbar_right i:hover {
+    color: #7d5d99;
+    transition: all 0.4s ease;
+}
+
+#form_recherche {
     display: none;
-}
-
-.body_game_searchbar_results {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 2rem;
 }
 
 /*Left*/
@@ -83,6 +88,7 @@
 }
 
 .body_game_single2_left img {
+    width: 100%;
     max-width: 130px;
     border: solid black 1px;
     border-radius: 100px;
@@ -91,7 +97,7 @@
 /*Right*/
 
 .body_game_single2_right {
-    width: 70%;
+    width: 75%;
 }
 
 .body_game_single2_right_top {
@@ -111,13 +117,150 @@
 
 .body_game_single2_extreme_right {
     display: flex;
-    width: 10%;
+    width: 5%;
 }
 
 .body_game_single2_extreme_right i {
     color: black;
     font-size: 30px;
     padding-top: 1.5rem;
-    margin-left: 5rem;
+}
 
+/*Responsive*/
+
+@media (max-width: 714px) {
+    /*Header*/
+
+    .body_game{
+        background-color: #18183C;
+        color: white;
+    }
+
+
+    .body_game_single2 {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding-bottom: 5rem;
+    }
+
+    .body_game_single3 {
+        width: 90%;
+        display: flex;
+        background-color: #494963;
+        border-radius: 15px;
+
+    }
+
+    /*ShearchBar*/
+
+    .body_game_searchbar {
+        display: flex;justify-content: center;
+    }
+
+    .body_game_searchbar2 {
+        width: 90%;
+    }
+
+    .body_game_searchbar3 {
+        display: flex;
+        padding: 5rem 0rem;
+    }
+
+    .body_game_searchbar_left {
+        width: 90%;
+    }
+
+    .body_game_searchbar_left input {
+        padding: 1rem 0rem;
+        width: 100%;
+        border: solid black 5px;
+        padding-left: 1rem;
+    }
+
+    .body_game_searchbar_right {
+        width: 10%;
+    }
+
+    .body_game_searchbar_right button {
+        border: none;
+        background-color: #494963;
+        width: 100%;
+        margin-top: 2.5px;
+        padding: 0.9rem 0rem;
+    }
+
+    .body_game_searchbar_right button:hover {
+        filter: brightness(1.75);
+        transition: all 0.4s ease;
+    }
+
+    .body_game_searchbar_right i {
+        font-size: 25px;
+    }
+
+    .body_game_searchbar_right i:hover {
+        color: #7d5d99;
+        transition: all 0.4s ease;
+    }
+
+    #form_recherche {
+        display: none;
+    }
+
+    /*Left*/
+
+    .body_game_single2_left {
+        display: flex;
+        justify-content: center;
+        padding: 0.5rem 0rem 0.5rem 0rem;
+        width: 30%;
+    }
+
+    .body_game_single2_left img {
+        width: 100%;
+        max-width: 100px;
+        border: solid black 1px;
+        border-radius: 100px;
+    }
+
+    /*Right*/
+
+    .body_game_single2_right {
+        width: 60%;
+    }
+
+    .body_game_single2_right_top {
+        display: flex;
+        padding: 1rem 0rem 1.5rem 0rem;
+    }
+
+    .body_game_single2_right_top_left{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-top: 3rem ;
+    }
+
+    .body_game_single2_right_top_right{
+        width: 50%;
+        display: none;
+    }
+
+    .body_game_single2_right_bottom {
+        display: none;
+    }
+
+    /*Extreme Right*/
+
+    .body_game_single2_extreme_right {
+        display: flex;
+        width: 10%;
+    }
+
+    .body_game_single2_extreme_right i {
+        color: black;
+        font-size: 30px;
+        padding-top: 1.5rem;
+    }
 }

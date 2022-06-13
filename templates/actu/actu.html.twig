@@ -4,20 +4,27 @@
 
 {% block body %}
 <div class="body_actualites">
-    <h1>Actualités</h1>
-    <div class="all_actus">
-        {% for actu in actualites %}
-            <div class="body_actualites_single1">
-                <div class="body_actualites_img">
-                    {% if actu.image %}
-                        <a href="{{ path('app_one_actu', {id: actu.id }) }}"><img src="{{ asset('upload/actus/' ~ actu.image) }}"></a>
-                    {% endif %}
+    <div class="body_actualites_top">
+        <h1>Actualités</h1>
+    </div>
+
+    <div class="body_actualites_bottom">
+        <div class="body_actualites_single1">
+            {% for actu in actualites %}
+                <div class="body_actualites_single2">
+                    <div class="body_actualites_single3">
+                        <div class="body_actualites_img">
+                            {% if actu.image %}
+                                <a href="{{ path('app_one_actu', {id: actu.id }) }}"><img src="{{ asset('upload/actus/' ~ actu.image) }}"></a>
+                            {% endif %}
+                        </div>
+                        <div class="body_actualites_title">
+                            <h2><a href="{{ path('app_one_actu', {id: actu.id }) }}">{{ actu.title }}</a></h2>
+                        </div>
+                    </div>
                 </div>
-                <div class="body_actualites_title">
-                    <h2><a href="{{ path('app_one_actu', {id: actu.id }) }}">{{ actu.title }}</a></h2>
-                </div>
-            </div>
-        {%  endfor %}
+            {% endfor %}
+        </div>
     </div>
 </div>
 {% endblock %}

@@ -1,12 +1,16 @@
-{{ form(form) }}
+{#{{ form(form) }}#}
 
-{#<section id="box_recherche_barre">#}
-{#    {{ form_start(form) }}#}
+    {{ form_start(form) }}
+    <div class="body_game_searchbar3">
+        <div class="body_game_searchbar_left">
+            {{ form_row(form.query) }}
+        </div>
+        <div class="body_game_searchbar_right">
+            <button type="submit" class="btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+    </div>
+    {{ form_end(form) }}
 
-{#    {{ form_row(form.query) }}#}
-{#    <div class="body_game_searchbar_right">#}
-{#        <button type="submit" class="btn"><i class="fa-solid fa-magnifying-glass"></i></button>#}
-{#    </div>#}
-{#    {{ form_end(form) }}#}
-{#</section>#}
+
+
 
