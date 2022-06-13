@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PostController!{% endblock %}
+
+{% block body %}
+
+<section id="body_all_publications">
+    <div class="box_path_createpost_view_publication">
+        <a href="{{ path('app_post')}}">Creer une publication</a>
+    </div>
+    <div class="all-publications">
+            {% for publication in publications %}
+        <div class="view_publication_single"
+                <div class="row-publications">
+                <div class="box_top_view_publication">
+                    <div class="box_view_publications_pseudo_avatar">
+                        <div class="box_view_publications_pseudo">
+                            Pseudo
+                        </div>
+                        <div class="box_view_publications_avatar">
+                            <img src="{{ asset('upload/users/gollum-62a6f55651000.jpg') }}">
+                        </div>
+                    <div class="view_publication_title">
+                    <p> {{ publication.title }} </p>
+                    </div>
+                    </div>
+                </div>
+                    <div class="view_publication_description">
+                    <p> {{ publication.description }} </p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% endblock %}

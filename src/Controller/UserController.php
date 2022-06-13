@@ -53,7 +53,7 @@ class UserController extends AbstractController
     }
 
     #[Route('/avatar', name: 'app_avatar')]
-    public function modifAvatar(Request $request, SluggerInterface $slugger,EntityManagerInterface $em): Response
+    public function modifAvatar(Request $request, SluggerInterface $slugger,EntityManagerInterface $em,UserRepository $userRepository): Response
     {
         //$user = new User();
         $user = $this->getUser();
@@ -95,9 +95,11 @@ class UserController extends AbstractController
 
             return $this->redirectToRoute('app_user');
         }
-
+        $streamers= $userRepository->findById($user);
         return $this->renderForm('user/avatar.html.twig', [
+            'streamers' => $streamers,
             'addAvatar' => $form,
+
         ]);
     }
     public function getTargetDirectory()

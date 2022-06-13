@@ -4,7 +4,18 @@
 
 {% block body %}
 <section id="body_avatar">
-<h1>PAGE AVATAR</h1>
+<h4>PAGE AVATAR</h4>
+
+<div class="view_add_avatar">
+    <div>
+    {%for streamer in streamers%}
+    {% if streamer.avatar %}
+    <img src="{{ asset('upload/users/' ~ streamer.avatar) }}">
+    {% endif %}
+    {%endfor %}
+</div>
+</div>
+
 <div class="box_add_avatar">
                 <div class="add_Avatar">
                     {{ form_start(addAvatar) }}
@@ -15,9 +26,5 @@
                     {{ form_end(addAvatar) }}
                 </div>
             </div>
-
-
-<p> En construction </p>
-<i class="fa-solid fa-triangle-exclamation"></i>
 </section>
 {% endblock %}

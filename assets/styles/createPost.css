@@ -8,7 +8,6 @@
 }
 
 .box_icon_pseudo{
-    display: flex;
     justify-content: space-between;
     gap: 10px;
 }
@@ -34,16 +33,12 @@
 }
 
 .create_publication_form_title input{
-    margin: 2rem;
-    display: flex;
     justify-content: flex-start;
     width :45%;
 }
 .create_publication_form_description textarea{
     resize: none;
     height :200px;
-    margin: 2rem;
-    display: flex;
     justify-content: flex-start;
     width :80%;
 }
@@ -53,7 +48,6 @@
 }
 
 .box_valid_create_publication{
-    width :40%;
     display: flex;
     justify-content: center;
 }
@@ -69,4 +63,34 @@
     color: #7d5d99;
     transition: all 0.4s ease;
     cursor: pointer;
+}
+
+.box_createform_bc_grey{
+    padding: 2rem;
+    background-color: #494963 ;
+}
+
+.button_gamename_create_publication{
+    text-align: center;
+}
+
+.create_publication_pseudo p{
+    text-align: center;
+}
+
+.view_createpost_avatar img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.view_createpost_avatar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width:600px) {
+    .big_box_form_create_publication{
+        width: 1000px;
+    }
 }

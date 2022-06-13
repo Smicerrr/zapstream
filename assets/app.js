@@ -20,6 +20,7 @@ import './styles/404.css';
 import './styles/home.css';
 import './styles/createPost.css';
 import './styles/game.css';
+import './styles/publications.css';
 
 
 // start the Stimulus application

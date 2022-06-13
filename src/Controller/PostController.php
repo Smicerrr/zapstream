@@ -3,6 +3,8 @@
 namespace App\Controller;
 
 use App\Entity\Post;
+use App\Repository\UserRepository;
+use App\Repository\PostRepository;
 use App\Form\CreatePublicationType;
 use Symfony\Component\HttpFoundation\Request;
 use Doctrine\ORM\EntityManagerInterface;
@@ -13,9 +15,10 @@ use Symfony\Component\Routing\Annotation\Route;
 class PostController extends AbstractController
 {
     #[Route('/post', name: 'app_post')]
-    public function createPublication(Request $request, EntityManagerInterface $entityManager): Response
+    public function createPublication(Request $request, EntityManagerInterface $entityManager,UserRepository $userRepository): Response
     {
         $post = new Post();
+        $user = $this->getUser();
         $form = $this->createForm(CreatePublicationType::class, $post);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
@@ -29,9 +32,33 @@ class PostController extends AbstractController
 
             return $this->redirectToRoute('app_post');
         }
-
+        $streamers= $userRepository->findById($user);
         return $this->render('post/post.html.twig', [
             'form' => $form->createView(),
+            'streamers'=> $streamers,
+        ]);
+    }
+
+    #[Route('/publications', name: 'app_publications')]
+    public function publications(PostRepository $postRepository): Response
+    {
+        $publications = $postRepository->findAll();
+        return $this->render('post/publications.html.twig', [
+            'publications' => $publications
+        ]);
+    }
+
+    #[Route('/post/singlepost/{id}', name: 'app_singlepost')]
+    public function singlePublication(Request $request, EntityManagerInterface $entityManager,PostRepository $postRepository): Response
+    {
+        $singlepost = $postRepository->find($id);
+        if(empty($singlepost)) {
+            throw $this->createNotFoundException('Cette publication n\'existe pas ');
+        }
+
+        return $this->render('user/single-post.html.twig', [
+            'singlepost' => $singlepost,
+            //'twitch' => $twitch
         ]);
     }
 }

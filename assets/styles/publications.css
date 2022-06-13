@@ -1,0 +1,46 @@
+#body_all_publications{
+    width: 100%;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    text-align: center;
+    color: white;
+    background-color:#18183C
+}
+
+.all-publications{
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+.box_path_createpost_view_publication{
+    background-color: #494963;
+    width: 100%;
+}
+
+.view_publication_single{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    width: 80%;
+    background-color: #494963;
+    padding: 2rem;
+}
+.view_publication_description{
+    background-color:#333360;
+}
+
+.box_view_publications_pseudo_avatar{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 30%;
+}
+
+.box_top_view_publication{
+    display: flex;
+    justify-content: center;
+}
+
+.box_view_publications_avatar img{
+    width:30%;
+}

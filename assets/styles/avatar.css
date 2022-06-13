@@ -10,3 +10,26 @@
     color: white;
     font-size: 200px;
 }
+
+.view_add_avatar img{
+    border-radius: 50%;
+}
+
+input[type='file']{
+    padding:0.5rem 2rem 0.5rem 2rem;
+    background-color: #A053CF;
+    border-radius: 15px;
+    border: none;
+}
+.box_add_avatar button{
+    padding:0.5rem 2rem 0.5rem 2rem;
+    background-color: #A053CF;
+    border-radius: 15px;
+    border: none;
+}
+
+.box_add_avatar button:hover{
+    color: white;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
