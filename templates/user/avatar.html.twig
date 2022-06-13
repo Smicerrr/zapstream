@@ -5,6 +5,18 @@
 {% block body %}
 <section id="body_avatar">
 <h1>PAGE AVATAR</h1>
+<div class="box_add_avatar">
+                <div class="add_Avatar">
+                    {{ form_start(addAvatar) }}
+                            <div class="btn_add_avatar">
+                                {{ form_row(addAvatar.avatar2) }}
+                            </div>
+<button type="submit" class="btn">Valider</button>
+                    {{ form_end(addAvatar) }}
+                </div>
+            </div>
+
+
 <p> En construction </p>
 <i class="fa-solid fa-triangle-exclamation"></i>
 </section>

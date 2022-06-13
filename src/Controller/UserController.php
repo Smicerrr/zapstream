@@ -5,6 +5,10 @@ namespace App\Controller;
 use App\Repository\UserRepository;
 use App\Entity\User;
 use App\Form\EditUserType;
+use App\Form\AddAvatarType;
+use Symfony\Component\HttpFoundation\File\Exception\FileException;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\String\Slugger\SluggerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
@@ -48,13 +52,52 @@ class UserController extends AbstractController
     }
 
     #[Route('/avatar', name: 'app_avatar')]
-    public function modifAvatar(): Response
+    public function modifAvatar(Request $request, SluggerInterface $slugger,EntityManagerInterface $em): Response
     {
-        $avatar = 'avatar';
-        return $this->render('user/avatar.html.twig', [
-            'avatar' => $avatar
+        //$user = new User();
+        $user = $this->getUser();
+        $form = $this->createForm(AddAvatarType::class, $user);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $avatarFile = $form->get('avatar2')->getData();
+
+            if ($avatarFile) {
+                $originalFilename = pathinfo($avatarFile->getClientOriginalName(), PATHINFO_FILENAME);
+                // this is needed to safely include the file name as part of the URL
+                $safeFilename = $slugger->slug($originalFilename);
+                $newFilename = $safeFilename.'-'.uniqid().'.'.$avatarFile->guessExtension();
+                
+                // Move the file to the directory where brochures are stored
+                try {
+                    $avatarFile->move(
+                        $this->getParameter('avatar_directory'),
+                        $newFilename
+                    );
+                } catch (FileException $e) {
+                    // ... handle exception if something happens during file upload
+                }
+
+                // updates the 'brochureFilename' property to store the PDF file name
+                // instead of its contents
+                $user->setAvatar($newFilename);
+                $em->persist($user);
+                $em->flush();
+                //$userRepository->add($user);
+
+
+            }
+
+            // ... persist the $product variable or any other work
+
+            return $this->redirectToRoute('app_user');
+        }
+
+        return $this->renderForm('user/avatar.html.twig', [
+            'addAvatar' => $form,
         ]);
     }
+
     #[Route('/security', name: 'app_security')]
     public function modifSecurity(): Response
     {

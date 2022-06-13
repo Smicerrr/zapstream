@@ -2,6 +2,8 @@
 
 #body_login{
     padding: 5rem 0rem 5rem 0rem;
+    padding-top: 15rem;
+    padding-bottom: 15rem;
     justify-content: center;
     display: flex;
     background-color: #18183C;
@@ -124,17 +126,39 @@
     cursor: pointer;
 }
 
-@media (max-width: 680px) {
+@media (max-width:800px){
     .box_register2{
         display: none;
     }
-
     .box_login2{
-        padding-top: 2rem;
-        padding-bottom: 2rem;
         width: 100%;
-        text-align: center;
-        display: flex;
-        justify-content: center;
+    }
+}
+@media (max-width:465px){
+    #body_login h2{
+        font-size: 20px;
+    }
+    #body_login a{
+        font-size: 15px;
+    }
+    #body_register input{
+        font-size: 10px;
+    }
+}
+@media (max-width:400px){
+    #body_login h2{
+        font-size: 15px;
+    }
+    #body_login a{
+        font-size: 15px;
+    }
+    #body_register input{
+        font-size: 10px;
+        padding: none;
+    }
+}
+@media (max-width:350px){
+    #body_login a{
+        font-size: 10px;
     }
 }

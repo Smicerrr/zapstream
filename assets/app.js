@@ -10,6 +10,7 @@ import './styles/app.css';
 import './styles/streamer.css';
 import './styles/formRegister.css';
 import './styles/actus.css';
+import './styles/actu.css';
 import './styles/formLogin.css';
 import './styles/infos.css';
 import './styles/editUser.css';

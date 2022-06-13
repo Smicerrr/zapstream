@@ -16,15 +16,9 @@ class CreatePublicationType extends AbstractType
         $builder
             ->add('title', TextType::class,[
                 'label' => false,
-                'attr' => array(
-                    'placeholder' => 'Titre'
-                    )
             ])
             ->add('description', TextareaType::class,[
                 'label' => false,
-                'attr' => array(
-                    'placeholder' => 'Description'
-                    )
             ])
         ;
     }
