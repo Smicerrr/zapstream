@@ -20,6 +20,59 @@
 
 }
 
+/*ShearchBar*/
+
+.body_game_searchbar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0rem 2rem 0rem;
+}
+
+.body_game_searchbar2{
+    border: solid red;
+    border: solid black 3px;
+    display: flex;;
+    width: 90%;
+}
+
+#box_recherche_barre form{
+    width: 100%;
+    display: flex;
+
+}
+
+.body_game_searchbar_right button{
+    padding: 1rem;
+}
+
+.body_game_searchbar_left {
+    width: 95%;
+}
+
+.body_game_searchbar_right {
+    background-color: white;
+    color: black;
+    width: 5%;
+    font-size: 35px;
+}
+
+#form_query {
+    border: none;
+    width: 100%;
+    padding: 1rem;
+}
+
+.btn-primary {
+    display: none;
+}
+
+.body_game_searchbar_results {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
+
 /*Left*/
 
 .body_game_single2_left {

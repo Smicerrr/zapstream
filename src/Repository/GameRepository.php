@@ -39,6 +39,36 @@ class GameRepository extends ServiceEntityRepository
         }
     }
 
+    public function findGamesByName(string $query)
+    {
+
+        return $this->createQueryBuilder('g')
+            ->andWhere('g.title LIKE :val')
+            ->orWhere('g.description LIKE :val')
+            ->setParameter('val', '%'.$query.'%')
+            //->orderBy('g.id', 'ASC')
+            ->setMaxResults(10)
+            ->getQuery()
+            ->getResult()
+        ;
+//        $qb = $this->createQueryBuilder('p');
+//        $qb
+//            ->where(
+//                $qb->expr()->andX(
+//                    $qb->expr()->orX(
+//                        $qb->expr()->like('p.title', ':query'),
+//                        $qb->expr()->like('p.content', ':query'),
+//                    ),
+//                    $qb->expr()->isNotNull('p.created_at')
+//                )
+//            )
+//            ->setParameter('query', '%' . $query . '%')
+//        ;
+//        return $qb
+//            ->getQuery()
+//            ->getResult();
+    }
+
 //    /**
 //     * @return Game[] Returns an array of Game objects
 //     */

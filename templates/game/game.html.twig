@@ -4,13 +4,24 @@
 
 {% block body %}
     <div class="body_game">
-        <div class="body_game_all">
+        <div class="body_game">
+            <div class="body_game_searchbar">
+                <div class="body_game_searchbar2">
+                    <div class="body_game_searchbar_left">
+                        {{ render(controller('App\\Controller\\SearchController::searchBar')) }}
+                    </div>
+                    <div class="body_game_searchbar_right">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="body_game_all">
             {% for game in games %}
                 <div class="body_game_single1">
                     <div class="body_game_single2">
                         <div class="body_game_single3">
                             <div class="body_game_single2_left">
-                                <img src="{{ asset('upload/game/' ~ game.image) }}"">
+                                <img src="{{ asset('upload/game/' ~ game.image) }}">
                             </div>
                             <div class="body_game_single2_right">
                                 <div class="body_game_single2_right_top">
@@ -31,7 +42,6 @@
                         </div>
                     </div>
                 </div>
-
             {% endfor %}
         </div>
     </div>
