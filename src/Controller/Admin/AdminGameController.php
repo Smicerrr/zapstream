@@ -13,8 +13,10 @@ class AdminGameController extends AbstractController
     #[Route('/', name: 'app_admin_game_index')]
     public function index(GameRepository $gameRepository): Response
     {
+        $currentUser = $this->getUser();
         $games = $gameRepository->findAll();
         return $this->render('admin/game/index.html.twig', [
+            'currentUser' => $currentUser,
             'games' => $games
         ]);
     }
