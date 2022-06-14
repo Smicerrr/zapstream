@@ -1,0 +1,49 @@
+/*Header*/
+
+.body_single_game {
+    background-color: #18183C;
+    color: white;
+}
+
+
+/*Top*/
+
+.body_single_game_top {
+    display: flex;
+    padding-top: 3rem;
+}
+
+.body_single_game_top_left {
+    width: 50%;
+    padding: 2rem;
+}
+
+.body_single_game_top_left img {
+    width: 100%;
+    border: solid 1px;
+}
+
+.body_single_game_top_right {
+    width: 50%;
+}
+
+.body_single_game_top_right_title {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 0rem;
+}
+
+.body_single_game_top_right_title h1 {
+    border-bottom: solid 1px;
+}
+
+.body_single_game_top_right_description {
+    display: flex;
+    justify-content: center;
+}
+
+/*Bottom*/
+
+.body_single_game_bottom {
+    border: solid;
+}

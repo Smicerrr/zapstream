@@ -21,6 +21,7 @@ import './styles/home.css';
 import './styles/createPost.css';
 import './styles/game.css';
 import './styles/publications.css';
+import './styles/single-game.css';
 
 
 // start the Stimulus application

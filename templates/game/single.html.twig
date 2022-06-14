@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ZAP Stream - Game{% endblock %}
+
+{% block body %}
+    <div class="body_single_game">
+        <div class="body_single_game_top">
+            <div class="body_single_game_top_left">
+                <img src="{{ asset('upload/game/' ~ game.image) }}">
+            </div>
+            <div class="body_single_game_top_right">
+                <div class="body_single_game_top_right_title">
+                    <h1>{{ game.title }}</h1>
+                </div>
+                <div class="body_single_game_top_right_description">
+                    <h4>{{ game.description }}</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="body_single_game_bottom">
+
+        </div>
+    </div>
+{% endblock %}

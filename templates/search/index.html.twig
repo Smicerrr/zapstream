@@ -22,7 +22,7 @@
                     {% for game in games %}
                         <div class="body_game_single1">
                             <div class="body_game_single2">
-                                <a class="body_game_single3" href="{{ path('app_one_actu', {id: game.id }) }}">
+                                <a class="body_game_single3" href="{{ path('app_one_game', {id: game.id }) }}">
                                     <div class="body_game_single2_left">
                                         <img src="{{ asset('upload/game/' ~ game.image) }}">
                                     </div>
