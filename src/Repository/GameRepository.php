@@ -69,20 +69,20 @@ class GameRepository extends ServiceEntityRepository
 //            ->getResult();
     }
 
-//    /**
-//     * @return Game[] Returns an array of Game objects
-//     */
-//    public function findByExampleField($value): array
-//    {
-//        return $this->createQueryBuilder('g')
-//            ->andWhere('g.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->orderBy('g.id', 'ASC')
-//            ->setMaxResults(10)
-//            ->getQuery()
-//            ->getResult()
-//        ;
-//    }
+    /**
+     * @return Game[] Returns an array of Game objects
+     */
+    public function findByMaxNumber(): array
+    {
+        return $this->createQueryBuilder('a')
+            //  ->andWhere('a.exampleField = :val')
+            //->setParameter('val', $value)
+//            ->orderBy('a.id', 'ASC')
+            ->setMaxResults(1)
+            ->getQuery()
+            ->getResult()
+            ;
+    }
 
 //    public function findOneBySomeField($value): ?Game
 //    {

@@ -8,98 +8,81 @@
 .body_accueil_title {
     display: flex;
     justify-content: center;
-    padding: 1rem 0rem 1rem 0rem;
+    padding: 1rem 0rem;
 }
 
-.body_accueil_top {
-    display: flex;
-    padding-bottom: 5rem;
-}
-
-/*Top left*/
-
-.body_accueil_top_left {
-    width: 50%;
-}
-
-.body_accueil_top_left_box {
-    display: flex;flex-flow: row wrap;
-}
-
-.body_accueil_top_left_box_single1 {
+.body_accueil_description {
     display: flex;
     justify-content: center;
-    width: 50%;
-    padding: 2rem 0rem 2rem 0rem;
+    padding: 1rem 0rem;
 }
 
-.body_accueil_top_left_box_single2 {
+/*Bottom 1*/
+
+.body_accueil_bottom_1 {
+    display: flex;
+}
+
+.body_accueil_bottom_1_left {
+    width: 50%;
+    display: flex;
+    justify-content: center;
     background-color: #494963;
-    width: 250px;
-    border: solid white 1px;
-    border-radius: 20px;
-    box-shadow: 5px 3px 3px black;
 }
 
-.body_accueil_top_left_box_img {
-    display: flex;
-    justify-content: center;
+.body_accueil_bottom_1_left h3 {
+    width: 95%;
+    padding: 2rem 0rem;
 }
 
-.body_accueil_top_left_box_img img {
-    max-width: 250px;
-    border-radius: 20px 20px 0px 0px;
-}
-
-.body_accueil_top_left_box_title {
-    display: flex;
-    justify-content: center;
-    padding: 1rem 0rem 1rem 0rem;
-}
-
-/*Top right*/
-
-.body_accueil_top_right {
-    border: solid red;
+.body_accueil_bottom_1_right {
+    border: solid purple;
     width: 50%;
+    display: flex;
+    justify-content: center;
 }
 
+/*Bottom 2*/
 
+.body_accueil_bottom_2 {
+    display: flex;
+}
 
-/*Bottom*/
-
-.body_accueil_bottom {
+.body_accueil_bottom_2_left {
+    border: solid purple;
+    width: 50%;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
-    padding-bottom: 5rem;
 }
 
-.body_accueil_bottom_streamer {
-    display: flex;
-    justify-content: center;
-    flex-flow: row wrap;
-    width: 50%;
-}
-.body_accueil_bottom_streamer a {
-    display: flex;
-    justify-content: center;
+.body_accueil_bottom_2_left_jeux {
+    border: solid blue;
     width: 100%;
-    padding: 2rem;
 }
 
-.body_accueil_bottom_streamer_single {
-    margin: 2rem 0;
-    border-radius: 15px;
-    background-color: #393968;
+.body_accueil_bottom_2_left_post {
+    border: solid blue;
+    width: 100%;
+}
+
+.body_accueil_bottom_2_right {
+    width: 50%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
+    justify-content: center;
+    background-color: #494963;
 }
 
-.body_accueil_bottom_streamer_single img {
-    width: 100px; height: 100px;
-    border-radius: 50px;
+.body_accueil_bottom_2_right h3 {
+    width: 95%;
+    padding: 2rem 0rem;
 }
+
+/*Bottom 3*/
+
+.body_accueil_bottom_3 {
+    border: solid red;
+    display: flex;
+    justify-content: center;
+}
+
 

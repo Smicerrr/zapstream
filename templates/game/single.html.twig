@@ -19,7 +19,22 @@
         </div>
 
         <div class="body_single_game_bottom">
+            <div class="body_single_game_bottom_left">
+                <h1>Publications</h1>
+            </div>
+            <div class="body_single_game_bottom_right">
+                <div class="body_single_game_bottom_right_top">
+                    {% if app.user %}
+                        <li><a href="{{ path("app_post") }}"><h4>Créer une publication</h4></a></li>
+                    {% else %}
+                        <li><a href="{{ path("app_login") }}"><h4>Créer une publication</h4></a></li>
+                    {% endif %}
+                </div>
+                <div class="body_single_game_bottom_right_bottom">
+                    <li><a href="{{ path("app_post") }}"><h4>Voir les publication</h4></a></li>
 
+                </div>
+            </div>
         </div>
     </div>
 {% endblock %}

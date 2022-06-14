@@ -46,4 +46,45 @@
 
 .body_single_game_bottom {
     border: solid;
+    display: flex;
+}
+
+/*Left*/
+
+.body_single_game_bottom_left {
+    border: solid red;
+    width: 85%;
+}
+
+/*Right*/
+
+.body_single_game_bottom_right {
+    border: solid red;
+    width: 25%;
+}
+
+.body_single_game_bottom_right_top {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0rem  ;
+}
+
+.body_single_game_bottom_right_top h4 {
+    border: solid black 1px;
+    border-radius: 50px ;
+    padding: 1rem;
+    background-color: #333360;
+}
+
+.body_single_game_bottom_right_bottom {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0rem;
+}
+
+.body_single_game_bottom_right_bottom h4 {
+    border: solid black 1px;
+    border-radius: 50px ;
+    padding: 1rem;
+    background-color: #333360;
 }
