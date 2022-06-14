@@ -29,6 +29,10 @@ class Actu
     #[ORM\JoinColumn(nullable: false)]
     private $user;
 
+    public function __construct() {
+        $this->created_at = new \DateTimeImmutable();
+        $this->modified_at = new \DateTimeImmutable();
+    }
     public function getId(): ?int
     {
         return $this->id;

@@ -94,6 +94,8 @@ class GameFixtures extends Fixture implements DependentFixtureInterface
         $manager->persist($game);
 
         $manager->flush();
+
+        $this->addReference('game', $game);
     }
 
     public function getDependencies(){
