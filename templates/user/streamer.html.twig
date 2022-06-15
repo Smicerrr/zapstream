@@ -8,7 +8,6 @@
         <section id="streamer">
             <div id="heading-streamer">
                 <h1>STREAMERS</h1>
-                <p><span>recent<i class="fa-solid fa-caret-down"></i></span><span>followers<i class="fa-solid fa-caret-down"></i></span></p>
             </div>
 
             <div id="all-streamers">
@@ -26,7 +25,7 @@
                                 <div>
                                     <p> {{ streamer.pseudo }}
                                         {% if streamer.followers %}
-                                            {{ streamer.followers }} - followers
+                                            - {{ streamer.followers }} followers
                                         {% endif %}
                                     </p>
                                 </div>

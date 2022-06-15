@@ -40,7 +40,9 @@
 
                     <div class="single-streamer-infos-bottom">
                         {% if streamer.description %}
-                            <p>{{ streamer.description }}</p>
+                            <div class="single-streamer-description">
+                                <p>{{ streamer.description }}</p>
+                            </div>
                         {% endif %}
                         <div class="twitchlink">
                             {% if streamer.twitchlink %}
