@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Post;
 use App\Repository\UserRepository;
 use App\Repository\PostRepository;
+
 use App\Form\CreatePublicationType;
 use Symfony\Component\HttpFoundation\Request;
 use Doctrine\ORM\EntityManagerInterface;
@@ -16,9 +17,10 @@ class PostController extends AbstractController
 {
     #[Route('/post', name: 'app_post')]
     public function createPublication(Request $request, EntityManagerInterface $entityManager,UserRepository $userRepository): Response
-    {
+    { 
         $post = new Post();
         $user = $this->getUser();
+        // $game = $this->getGame();
         $form = $this->createForm(CreatePublicationType::class, $post);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
@@ -26,6 +28,7 @@ class PostController extends AbstractController
             $newDate = new \DateTimeImmutable;
             $post->setCreatedAt($newDate);
             $post->setModifiedAt($newDate);
+            $post-> setUser($this->getUser());
             $entityManager->persist($post);
             $entityManager->flush();
             // do anything else you need here, like send an email
@@ -33,9 +36,11 @@ class PostController extends AbstractController
             return $this->redirectToRoute('app_post');
         }
         $streamers= $userRepository->findById($user);
+        // $games= $gamesRepository->findById($game);
         return $this->render('post/post.html.twig', [
             'form' => $form->createView(),
             'streamers'=> $streamers,
+            // 'games'=> $games,
         ]);
     }
 
