@@ -57,6 +57,7 @@ class PostController extends AbstractController
     public function singlePublication($id, Request $request, EntityManagerInterface $entityManager,PostRepository $postRepository): Response
     {
         $singlepost = $postRepository->find($id);
+//        dd($singlepost);
         if(empty($singlepost)) {
             throw $this->createNotFoundException('Cette publication n\'existe pas ');
         }
