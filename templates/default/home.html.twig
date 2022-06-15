@@ -77,24 +77,24 @@
                             {% endfor %}
                         </div>
                         <div class="body_accueil_bottom_2_left_post">
-                            {% for publication in publications %}
-                                <div class="view_publication_single"
-                                <div class="row-publications">
-                                    <div class="box_top_view_publication">
-                                        <div class="box_view_publications_pseudo_avatar">
-                                            <div class="box_view_publications_pseudo">
-                                                Pseudo
-                                            </div>
-                                            <div class="box_view_publications_avatar">
-                                                <img src="{{ asset('upload/users/gollum-62a6f55651000.jpg') }}">
-                                            </div>
-                                            <div class="view_publication_title">
-                                                <p> {{ publication.title }} </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            {% endfor %}
+{#                            {% for publication in publications %}#}
+{#                                <div class="view_publication_single"#}
+{#                                <div class="row-publications">#}
+{#                                    <div class="box_top_view_publication">#}
+{#                                        <div class="box_view_publications_pseudo_avatar">#}
+{#                                            <div class="box_view_publications_pseudo">#}
+{#                                                Pseudo#}
+{#                                            </div>#}
+{#                                            <div class="box_view_publications_avatar">#}
+{#                                                <img src="{{ asset('upload/users/gollum-62a6f55651000.jpg') }}">#}
+{#                                            </div>#}
+{#                                            <div class="view_publication_title">#}
+{#                                                <p> {{ publication.title }} </p>#}
+{#                                            </div>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            {% endfor %}#}
                         </div>
                     </div>
                     <div class="body_accueil_bottom_2_right">
@@ -105,7 +105,27 @@
                 </div>
 
                 <div class="body_accueil_bottom_3">
-                    <h1>Actualités</h1>
+                    <div class="body_accueil_bottom_4">
+                        <div class="body_accueil_bottom_4_title">
+                            <h1>Actualités récentes</h1>
+                        </div>
+                        <div class="body_actualites_single1">
+                            {% for actu in actualites %}
+                                <div class="body_actualites_single2">
+                                    <div class="body_actualites_single3">
+                                        <div class="body_actualites_img">
+                                            {% if actu.image %}
+                                                <a href="{{ path('app_one_actu', {id: actu.id }) }}"><img src="{{ asset('upload/actus/' ~ actu.image) }}"></a>
+                                            {% endif %}
+                                        </div>
+                                        <div class="body_actualites_title">
+                                            <h2><a href="{{ path('app_one_actu', {id: actu.id }) }}">{{ actu.title }}</a></h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

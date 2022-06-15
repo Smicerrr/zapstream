@@ -54,14 +54,14 @@ class PostController extends AbstractController
     }
 
     #[Route('/post/singlepost/{id}', name: 'app_singlepost')]
-    public function singlePublication(Request $request, EntityManagerInterface $entityManager,PostRepository $postRepository): Response
+    public function singlePublication($id, Request $request, EntityManagerInterface $entityManager,PostRepository $postRepository): Response
     {
         $singlepost = $postRepository->find($id);
         if(empty($singlepost)) {
             throw $this->createNotFoundException('Cette publication n\'existe pas ');
         }
 
-        return $this->render('user/single-post.html.twig', [
+        return $this->render('post/single-post.html.twig', [
             'singlepost' => $singlepost,
             //'twitch' => $twitch
         ]);
