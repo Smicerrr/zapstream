@@ -9,6 +9,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Validator\Constraints\File;
 
 class GameType extends AbstractType
 {
@@ -23,9 +24,20 @@ class GameType extends AbstractType
             ->add('description', TextareaType::class, array(
                 'label'    => 'Description'
             ))
-            ->add('image', FileType::class, array(
-                'label'    => 'Image'
-            ))
+            ->add('gameImage', FileType::class, array(
+                'label'    => false,
+                'mapped'   => false,
+                'constraints' => [
+                    new File([
+                        'maxSize' => '10000k',
+                        'mimeTypes' => [
+                            'image/jpeg',
+                            'image/png',
+                        ],
+                        'mimeTypesMessage' => 'Veuillez insérer une image de type jpeg ou png'
+                    ])
+                ],
+            ));
         ;
     }
 

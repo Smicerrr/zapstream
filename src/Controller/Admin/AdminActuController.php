@@ -25,7 +25,6 @@ class AdminActuController extends AbstractController
         return $this->render('admin/actu/index.html.twig', [
             'currentUser' => $currentUser,
             'actus' => $actuRepository->findAll(),
-
         ]);
     }
 
@@ -77,5 +76,27 @@ class AdminActuController extends AbstractController
             'form' => $form,
         ]);
 
+    }
+
+    #[Route('/{id}/edit', name: 'app_admin_actu_edit', methods: ['GET', 'POST'])]
+    public function edit(Request $request, $id, ActuRepository $actuRepository): Response
+    {
+        $actu = $actuRepository->find($id);
+        if(!$actu) {
+            throw $this->createNotFoundException('no actu');
+        }
+        $form = $this->createForm(ActuType::class, $actu);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $actuRepository->add($actu, true);
+
+            return $this->redirectToRoute('app_admin_actu_index', [], Response::HTTP_SEE_OTHER);
+        }
+
+        return $this->renderForm('admin/actu/edit.html.twig', [
+            'actu' => $actu,
+            'form' => $form,
+        ]);
     }
 }
