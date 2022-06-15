@@ -6,6 +6,7 @@
 parameters:
     avatar_directory: '%kernel.project_dir%/public/upload/users'
     actu_directory: '%kernel.project_dir%/public/upload/actus'
+    game_directory: '%kernel.project_dir%/public/upload/game'
 services:
     # default configuration for services in *this* file
     _defaults:

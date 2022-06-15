@@ -27,9 +27,10 @@ class ActuType extends AbstractType
             ->add('actuImage', FileType::class, array(
                 'label'    => false,
                 'mapped'   => false,
+                'required' => false,
                 'constraints' => [
                     new File([
-                        'maxSize' => '2000k',
+                        'maxSize' => '10000k',
                         'mimeTypes' => [
                             'image/jpeg',
                             'image/png',
