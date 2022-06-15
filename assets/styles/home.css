@@ -19,6 +19,15 @@
 
 /*Bottom 1*/
 
+.body_accueil_bottom {
+    display: flex;
+    justify-content: center;
+}
+
+.body_accueil_bottom_box {
+    width: 95%;
+}
+
 .body_accueil_bottom_1 {
     display: flex;
 }
@@ -28,6 +37,7 @@
     display: flex;
     justify-content: center;
     background-color: #494963;
+    border-radius: 15px;
 }
 
 .body_accueil_bottom_1_left h3 {
@@ -36,7 +46,6 @@
 }
 
 .body_accueil_bottom_1_right {
-    border: solid purple;
     width: 50%;
     display: flex;
     justify-content: center;
@@ -49,20 +58,19 @@
 }
 
 .body_accueil_bottom_2_left {
-    border: solid purple;
     width: 50%;
     display: flex;
     flex-flow: row wrap;
 }
 
 .body_accueil_bottom_2_left_jeux {
-    border: solid blue;
     width: 100%;
 }
 
 .body_accueil_bottom_2_left_post {
-    border: solid blue;
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .body_accueil_bottom_2_right {
@@ -70,6 +78,7 @@
     display: flex;
     justify-content: center;
     background-color: #494963;
+    border-radius: 15px;
 }
 
 .body_accueil_bottom_2_right h3 {

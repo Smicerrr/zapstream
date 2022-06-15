@@ -20,7 +20,27 @@
 
         <div class="body_single_game_bottom">
             <div class="body_single_game_bottom_left">
-                <h1>Publications</h1>
+                {% for publication in publications %}
+                    <div class="view_publication_single"
+                    <div class="row-publications">
+                        <div class="box_top_view_publication">
+                            <div class="box_view_publications_pseudo_avatar">
+                                <div class="box_view_publications_pseudo">
+                                    Pseudo
+                                </div>
+                                <div class="box_view_publications_avatar">
+                                    <img src="{{ asset('upload/users/gollum-62a6f55651000.jpg') }}">
+                                </div>
+                                <div class="view_publication_title">
+                                    <p> {{ publication.title }} </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="view_publication_description">
+                            <p> {{ publication.description }} </p>
+                        </div>
+                    </div>
+                {% endfor %}
             </div>
             <div class="body_single_game_bottom_right">
                 <div class="body_single_game_bottom_right_top">
@@ -31,7 +51,7 @@
                     {% endif %}
                 </div>
                 <div class="body_single_game_bottom_right_bottom">
-                    <li><a href="{{ path("app_post") }}"><h4>Voir les publication</h4></a></li>
+                    <li><a href="{{ path("app_publications") }}"><h4>Voir les publication</h4></a></li>
 
                 </div>
             </div>
