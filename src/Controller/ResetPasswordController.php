@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Csrf\TokenGenerator\TokenGeneratorInterface;
+use Symfony\Component\Routing\Generator\UrlGenerator;
 use App\Repository\UserRepository;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Component\Mime\Address;
@@ -17,7 +18,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class ResetPasswordController extends AbstractController
 {
     #[Route('/reset/password', name: 'app_reset_password')]
-    public function index(Request $request, UserRepository $UserRepository, TokenGeneratorInterface $tokenGenerator, MailerInterface $Mailer): Response
+    public function index(Request $request, UserRepository $UserRepository, TokenGeneratorInterface $tokenGenerator, MailerInterface $mailer): Response
     {
         $success = true;
         $form = $this->createForm(ResetPasswordType::class);
@@ -33,8 +34,8 @@ class ResetPasswordController extends AbstractController
             $user->setToken($newToken);
             $UserRepository->add($user);  
             $url = $this->generateUrl('app_modif_password',['token'=>urlencode($user->getToken()), 'id' => urlencode($user->getId())], UrlGenerator::ABSOLUTE_URL);
-        }
-            $email = (new TemplatedEmail())
+       
+            $sendMailer = (new TemplatedEmail())
             ->from('fabien@example.com')
             ->to($email)
             ->subject('Thanks for signing up!')
@@ -47,7 +48,7 @@ class ResetPasswordController extends AbstractController
                 'url' => $url,
             ]);
             $mailer->send($sendMailer);
-            
+        }
         return $this->render('reset_password/index.html.twig', [
             'form' => $form->createView(),
             'success' => true
