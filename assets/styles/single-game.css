@@ -45,21 +45,20 @@
 /*Bottom*/
 
 .body_single_game_bottom {
-    border: solid;
     display: flex;
 }
 
 /*Left*/
 
 .body_single_game_bottom_left {
-    border: solid red;
     width: 85%;
+    display: flex;
+    justify-content: center;
 }
 
 /*Right*/
 
 .body_single_game_bottom_right {
-    border: solid red;
     width: 25%;
 }
 

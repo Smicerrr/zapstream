@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Repository\GameRepository;
+use App\Repository\PostRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -19,15 +20,17 @@ class GameController extends AbstractController
     }
 
     #[Route('/game/one/{id}', name: 'app_one_game')]
-    public function single($id, GameRepository $gameRepository): Response
+    public function single($id, GameRepository $gameRepository, PostRepository $postRepository): Response
     {
         $game = $gameRepository->find($id);
         if(empty($game)) {
             throw $this->createNotFoundException('Le jeu n\'existe pas');
         }
 
+        $publications = $postRepository->findByMaxNumber();
         return $this->render('game/single.html.twig', [
-            'game' => $game
+            'game' => $game,
+            'publications' => $publications
         ]);
     }
 
