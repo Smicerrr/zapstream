@@ -24,5 +24,14 @@ class AdminUserController extends AbstractController
         ]);
     }
 
+    #[Route('/one/{id}', name: 'app_one_user', methods: ['GET'])]
+    public function show(User $user, $id): Response
+    {
+        return $this->render('admin/user/show.html.twig', [
+            'id' => $id,
+            'user' => $user,
+        ]);
+    }
+
 
 }
