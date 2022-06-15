@@ -3,9 +3,6 @@
 {% block title %}Hello PostController!{% endblock %}
 
 {% block body %}
-
-<section id="body_single_publication">
-{{singlepost.title }}
-</section>
+<h1>Salut {{ singlepost.user.pseudo }}</h1>
 
 {% endblock %}

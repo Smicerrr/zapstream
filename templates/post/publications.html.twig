@@ -1,37 +1,36 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello PostController!{% endblock %}
+{% block title %}ZapStream - Publications{% endblock %}
 
 {% block body %}
-
-<section id="body_all_publications">
-    <div class="box_path_createpost_view_publication">
-        <a href="{{ path('app_post')}}">Creer une publication</a>
-    </div>
-    <div class="all-publications">
-            {% for publication in publications %}
-        <div class="view_publication_single"
-                <div class="row-publications">
-                <div class="box_top_view_publication">
-                    <div class="box_view_publications_pseudo_avatar">
-                        <div class="box_view_publications_pseudo">
-                            Pseudo
-                        </div>
-                        <div class="box_view_publications_avatar">
-                            <img src="{{ asset('upload/users/gollum-62a6f55651000.jpg') }}">
-                        </div>
-                    <div class="view_publication_title">
-                    <p> {{ publication.title }} </p>
+    <div class="body_publications">
+        <div class="body_publications_top">
+            <div class="body_publications_top_create">
+                {% if app.user %}
+                    <li><a href="{{ path("app_post") }}"><h4>Créer une publication</h4></a></li>
+                {% else %}
+                    <li><a href="{{ path("app_login") }}"><h4>Créer une publication</h4></a></li>
+                {% endif %}
+            </div>
+        </div>
+        <div class="body_publications_bottom">
+            <div class="body_publications_bottom2">
+                {% for publication in publications %}
+                    <div class="body_publications_bottom2_post">
+                        <a class="body_publications_bottom2_post2" href="{{ path('app_singlepost', {id: publication.id }) }}">
+                            <div class="body_publications_bottom2_post2_name">
+                                <h1>{{ publication.user.pseudo }}</h1>
+                            </div>
+                        </a>
                     </div>
-                    </div>
-                </div>
-                    <div class="view_publication_description">
-                    <p> {{ publication.description }} </p>
-                    </div>
-                </div>
-            {% endfor %}
+                {% endfor %}
+            </div>
         </div>
     </div>
-</section>
+
+
+{#        <img src="{{ asset('upload/users/gollum-62a6f55651000.jpg') }}">#}
+{#        <p> {{ publication.title }} </p>#}
+{#        <p> {{ publication.description }} </p>#}
 
 {% endblock %}
