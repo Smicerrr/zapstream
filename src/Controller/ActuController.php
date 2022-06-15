@@ -32,6 +32,4 @@ class ActuController extends AbstractController
         ]);
     }
 
-
-
 }
