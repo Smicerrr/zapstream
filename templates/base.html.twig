@@ -25,13 +25,13 @@
             <div class="logo">
                 <ul>
                     <li><a href="{{ path("app_home") }}"><img src="{{ asset('img/logo.png') }}"></a></li>
-                    {% if is_granted('ROLE_ADMIN') %}
-                        <li><a href="{{ path('admin_dashboard') }}">Admin dashboard</a></li>
-                    {% endif %}
                 </ul>
             </div>
 
             <div class="signing">
+                {% if is_granted('ROLE_ADMIN') %}
+                    <li class="admin-icon"><a href="{{ path('admin_dashboard') }}"><i class="fa-solid fa-lock"></i></a></li>
+                {% endif %}
                 <div class="login">
                     {% if app.user %}
                         <li><a href="{{ path('app_logout') }}"><i class="fa-solid fa-arrow-right-from-bracket"></i>Deconnexion</a></li>

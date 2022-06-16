@@ -15,7 +15,7 @@ class AdminDefaultController extends AbstractController
         $user = $this->getUser();
 
         return $this->render('admin/admin_default/index.html.twig', [
-            'user' => $user
+            'user' => $user,
         ]);
     }
 }
