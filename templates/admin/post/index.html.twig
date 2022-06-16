@@ -40,9 +40,8 @@
                     <td>{{ post.description }}</td>
                     <td>{{ post.game.title }}</td>
                     <td>{{ post.createdAt|date('d-m-Y') }}</td>
-                    <td><a href="{{ path('app_one_post', {id: post.id}) }}"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <td><a href="{{ path('app_singlepost', {id: post.id}) }}"><i class="fa-solid fa-magnifying-glass"></i></a>
                         <a href="{{ path('app_admin_post_edit', {'id': post.id}) }}"><i class="fa-solid fa-pen-to-square"></i></a>
-                        <a href=""><i class="fa-solid fa-trash-can"></i></a>
                     </td>
                 </tr>
                 </tbody>

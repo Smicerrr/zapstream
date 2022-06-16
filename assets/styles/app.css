@@ -84,6 +84,14 @@ header {
     gap: 1rem;
 }
 
+.admin-icon {
+    background-color: #323232;
+    border: solid;
+    padding: 0.4rem 0.6rem;
+    border-radius: 7.5px;
+
+}
+
 .login {
     background-color: #323232;
     border: solid;
