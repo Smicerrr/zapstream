@@ -27,6 +27,7 @@ class GameType extends AbstractType
             ->add('gameImage', FileType::class, array(
                 'label'    => false,
                 'mapped'   => false,
+                'required' => false,
                 'constraints' => [
                     new File([
                         'maxSize' => '10000k',

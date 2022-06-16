@@ -1,0 +1,13 @@
+{% extends 'admin.html.twig' %}
+
+{% form_theme form 'bootstrap_5_layout.html.twig' %}
+
+{% block title %}ZapStream Admin - Edit Game{% endblock %}
+
+{% block body %}
+    <h1>Editer ce jeu</h1>
+
+    {{ include('admin/game/_form.html.twig') }}
+
+    <a href="{{ path('app_admin_game_index') }}">Retourner aux jeux</a>
+{% endblock %}

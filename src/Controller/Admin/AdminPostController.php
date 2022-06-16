@@ -3,6 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Post;
+use App\Form\GameType;
 use App\Form\PostType;
 use App\Repository\PostRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -40,6 +41,28 @@ class AdminPostController extends AbstractController
         }
 
         return $this->renderForm('admin/post/new.html.twig', [
+            'post' => $post,
+            'form' => $form,
+        ]);
+    }
+
+    #[Route('/{id}/edit', name: 'app_admin_post_edit', methods: ['GET', 'POST'])]
+    public function edit(Request $request, $id, PostRepository $postRepository): Response
+    {
+        $post = $postRepository->find($id);
+        if(!$post) {
+            throw $this->createNotFoundException('Cette publication n\'existe pas');
+        }
+        $form = $this->createForm(PostType::class, $post);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $postRepository->add($post, true);
+
+            return $this->redirectToRoute('app_admin_post_index', [], Response::HTTP_SEE_OTHER);
+        }
+
+        return $this->renderForm('admin/post/edit.html.twig', [
             'post' => $post,
             'form' => $form,
         ]);
