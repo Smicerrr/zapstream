@@ -54,7 +54,7 @@
 .body_actualites_title {
     display: flex;
     justify-content: center;
-    padding: 1rem 0rem;
+    padding: 1rem
 }
 
 @media (max-width: 700px) {
@@ -84,7 +84,6 @@
         width: 95%;
         display: flex;
         flex-flow: row wrap;
-
     }
 
     .body_actualites_single2 {
@@ -114,7 +113,6 @@
     .body_actualites_title {
         display: flex;
         justify-content: center;
-        padding: 1rem 0rem;
     }
 
 }
