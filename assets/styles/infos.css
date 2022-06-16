@@ -84,6 +84,48 @@
     padding-bottom: 2rem;
 }
 
+/*Mentions Légales*/
+
+.mentions_legales_title {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0rem;
+}
+
+.mentions_legales_text {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0rem;
+}
+
+.mentions_legales_text_box {
+    width: 70%;
+}
+
+.mentions_legales_text_box1 {
+    padding: 0.5rem 0rem;
+    display: flex;
+    justify-content: center;
+}
+
+.mentions_legales_text_box2 {
+    padding: 0.5rem 0rem;
+    display: flex;
+    justify-content: center;
+}
+
+.mentions_legales_text_box3 {
+    padding: 0.5rem 0rem;
+    display: flex;
+    justify-content: center;
+}
+
+.mentions_legales_text_box4 {
+    padding: 0.5rem 0rem;
+    display: flex;
+    justify-content: center;
+}
+
 @media(max-width:650px) {
     h2{
         font-size: 15px;

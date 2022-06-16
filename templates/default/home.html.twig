@@ -21,9 +21,9 @@
                     </div>
                     <div class="body_accueil_bottom_1_right">
                         {% for streamer in streamers %}
-                            <div class="row-streamer">
+                            <div class="accueil_row-streamer">
                                 <a href="{{ path('app_one_streamer', {id: streamer.id }) }}">
-                                    <div class="one-streamer shadow">
+                                    <div class="accueil_one-streamer shadow">
                                         <div>
                                             {% if streamer.avatar %}
                                                 <img src="{{ asset('upload/users/' ~ streamer.avatar) }}">
@@ -49,52 +49,32 @@
                     <div class="body_accueil_bottom_2_left">
                         <div class="body_accueil_bottom_2_left_jeux">
                             {% for game in games %}
-                                <div class="body_game_single1">
-                                    <div class="body_game_single2">
-                                        <a class="body_game_single3" href="{{ path('app_one_game', {id: game.id }) }}">
-                                            <div class="body_game_single2_left">
+                                <div class="home_body_game_single1">
+                                    <div class="home_body_game_single2">
+                                        <a class="home_body_game_single3" href="{{ path('app_one_game', {id: game.id }) }}">
+                                            <div class="home_body_game_single2_left">
                                                 <img src="{{ asset('upload/game/' ~ game.image) }}">
                                             </div>
-                                            <div class="body_game_single2_right">
-                                                <div class="body_game_single2_right_top">
-                                                    <div class="body_game_single2_right_top_left">
+                                            <div class="home_body_game_single2_right">
+                                                <div class="home_body_game_single2_right_top">
+                                                    <div class="home_body_game_single2_right_top_left">
                                                         <h4>{{ game.title }}</h4>
                                                     </div>
-                                                    <div class="body_game_single2_right_top_right">
+                                                    <div class="home_body_game_single2_right_top_right">
                                                         <h4>Publications : nbr</h4>
                                                     </div>
                                                 </div>
-                                                <div class="body_game_single2_right_bottom">
+                                                <div class="home_body_game_single2_right_bottom">
                                                     <p>{{ game.description }}</p>
                                                 </div>
                                             </div>
-                                            <div class="body_game_single2_extreme_right">
+                                            <div class="home_body_game_single2_extreme_right">
                                                 <i class="fa-solid fa-angle-right"></i>
                                             </div>
                                         </a>
                                     </div>
                                 </div>
                             {% endfor %}
-                        </div>
-                        <div class="body_accueil_bottom_2_left_post">
-{#                            {% for publication in publications %}#}
-{#                                <div class="view_publication_single"#}
-{#                                <div class="row-publications">#}
-{#                                    <div class="box_top_view_publication">#}
-{#                                        <div class="box_view_publications_pseudo_avatar">#}
-{#                                            <div class="box_view_publications_pseudo">#}
-{#                                                Pseudo#}
-{#                                            </div>#}
-{#                                            <div class="box_view_publications_avatar">#}
-{#                                                <img src="{{ asset('upload/users/gollum-62a6f55651000.jpg') }}">#}
-{#                                            </div>#}
-{#                                            <div class="view_publication_title">#}
-{#                                                <p> {{ publication.title }} </p>#}
-{#                                            </div>#}
-{#                                        </div>#}
-{#                                    </div>#}
-{#                                </div>#}
-{#                            {% endfor %}#}
                         </div>
                     </div>
                     <div class="body_accueil_bottom_2_right">

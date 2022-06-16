@@ -51,7 +51,7 @@
 /*Left*/
 
 .body_single_game_bottom_left {
-    width: 85%;
+    width: 0%;
     display: flex;
     justify-content: center;
 }
@@ -59,13 +59,13 @@
 /*Right*/
 
 .body_single_game_bottom_right {
-    width: 25%;
+    width: 100%;
 }
 
 .body_single_game_bottom_right_top {
     display: flex;
     justify-content: center;
-    padding: 1rem 0rem  ;
+    padding: 2rem 0rem  ;
 }
 
 .body_single_game_bottom_right_top h4 {
