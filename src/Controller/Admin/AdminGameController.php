@@ -76,4 +76,26 @@ class AdminGameController extends AbstractController
             'form' => $form,
         ]);
     }
+
+    #[Route('/{id}/edit', name: 'app_admin_game_edit', methods: ['GET', 'POST'])]
+    public function edit(Request $request, $id, GameRepository $gameRepository): Response
+    {
+        $game = $gameRepository->find($id);
+        if(!$game) {
+            throw $this->createNotFoundException('no game');
+        }
+        $form = $this->createForm(GameType::class, $game);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $gameRepository->add($game, true);
+
+            return $this->redirectToRoute('app_admin_game_index', [], Response::HTTP_SEE_OTHER);
+        }
+
+        return $this->renderForm('admin/game/edit.html.twig', [
+            'game' => $game,
+            'form' => $form,
+        ]);
+    }
 }
